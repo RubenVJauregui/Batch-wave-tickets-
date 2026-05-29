@@ -1,0 +1,26 @@
+# Graza Batch/Wave Ticket Automation
+
+Scheduled task ID: `zAYPD8PwF5Gq03gqVQwXV`
+
+Schedule: every 30 minutes (`*/30 * * * *`) in `America/Los_Angeles`.
+
+## WISE criteria
+
+- Module: Outbound > Order
+- Status: `import`, `open`, `committed`
+- Order type: `dropship order`
+- Customer: `Drupley inc / dba Graza`
+
+## Processing rules
+
+1. Search eligible orders using the criteria above.
+2. If orders have label notes, create separate batches for those orders.
+3. Create wave tickets for all orders containing the same product and quantity.
+4. Create batches for all remaining orders.
+5. Limit each batch to 22 orders maximum.
+6. Assign batches/waves to `molvera`.
+7. Save run notes/results to this repository when executed.
+
+## Repository
+
+`RubenVJauregui/Batch-wave-tickets-`
