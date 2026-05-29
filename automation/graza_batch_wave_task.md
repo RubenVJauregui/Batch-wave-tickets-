@@ -1,15 +1,17 @@
 # Graza Batch/Wave Ticket Automation
 
-Scheduled task ID: `zAYPD8PwF5Gq03gqVQwXV`
+Scheduled task ID: `Fbm5G52Rtuggvh_vAmmUr`
 
 Schedule: every 30 minutes (`*/30 * * * *`) in `America/Los_Angeles`.
 
 ## WISE criteria
 
 - Module: Outbound > Order
+- Tab: `Night shift`
 - Status: `import`, `open`, `committed`
 - Order type: `dropship order`
 - Customer: `Drupley inc / dba Graza`
+- Exclude customer: `Euromarket designs`
 
 ## Processing rules
 
