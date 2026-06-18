@@ -1,0 +1,82 @@
+{
+  "run_timestamp": "2026-06-18T04:13:03-07:00",
+  "facility": "LT_F1 (Valley View)",
+  "customer": {
+    "name": "DRUPLEY INC / DBA GRAZA",
+    "id": "ORG-747717"
+  },
+  "assignee": {
+    "name": "molvera / MARTHA OLVERA",
+    "userId": "4419"
+  },
+  "filter": {
+    "statuses": ["IMPORTED", "OPEN", "COMMITTED"],
+    "orderType": "DS",
+    "customerId": "ORG-747717"
+  },
+  "search_results": {
+    "total_orders_found": 1,
+    "orders": [
+      {
+        "orderId": "DN-5194897",
+        "status": "COMMITTED",
+        "orderType": "DS",
+        "labelNote": null,
+        "item_signature": {
+          "ITEM-2352257_qty1": "Sizzle Bottle, 750ml (D1-SZL750)",
+          "ITEM-2352258_qty1": "Drizzle Bottle, 500ml (D1-DRZ500)",
+          "ITEM-2352262_qty1": "Drizzle Refill Can (C1-DRZ-500)",
+          "ITEM-2352263_qty1": "Sizzle Refill Can (C1-SZL-750)",
+          "ITEM-2352276_qty1": "Single Funnel, OXO (FUN-OXO-1)"
+        }
+      }
+    ]
+  },
+  "classification": {
+    "label_note_orders": 0,
+    "wave_groups": 0,
+    "wave_groups_detail": "No wave groups formed — only 1 order with unique item+quantity signature",
+    "batch_orders": 1
+  },
+  "dispatch_results": {
+    "setting_used": {
+      "id": 1246,
+      "name": "Graza DS Batch",
+      "pickMethod": "BATCH_ORDER_PICK",
+      "maxOrderQtyPerPlan": 22,
+      "preAssigneeUserId": "4419"
+    },
+    "plans": [
+      {
+        "planId": "PLAN-5072702",
+        "status": "RELEASED",
+        "pickMethod": "BATCH_ORDER_PICK",
+        "pickType": "PIECE_PICK",
+        "orderIds": ["DN-5194897"],
+        "pickTaskIds": ["TASK-5294799"],
+        "assigneeUserId": "4419",
+        "createdTime": "2026-06-18T11:13:03"
+      }
+    ],
+    "tasks": [
+      {
+        "taskId": "TASK-5294799",
+        "planId": "PLAN-5072702",
+        "status": "RELEASED"
+      }
+    ],
+    "errors": [],
+    "failed_inventory_commitments": [],
+    "exception_orders": []
+  },
+  "summary": {
+    "total_orders_processed": 1,
+    "total_plans_created": 1,
+    "total_tasks_created": 1,
+    "label_note_batches": 0,
+    "wave_plans": 0,
+    "batch_plans": 1,
+    "all_assigned_to": "molvera (4419)",
+    "errors": 0
+  }
+}

@@ -1,64 +1,57 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Graza Batch / Wave Tickets</title>
-  <style>
-    body { margin:0; font-family: Arial, Helvetica, sans-serif; background:#07111f; color:#e5edf7; }
-    .wrap { max-width:1100px; margin:0 auto; padding:32px; }
-    .card { background:#0f1b2d; border:1px solid #24364f; border-radius:18px; padding:24px; box-shadow:0 18px 60px rgba(0,0,0,.35); }
-    h1 { margin:0 0 8px; font-size:32px; }
-    .muted { color:#95a3b8; }
-    .grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap:14px; margin:22px 0; }
-    .stat { background:#13243a; border:1px solid #29405f; border-radius:14px; padding:18px; }
-    .stat b { display:block; font-size:34px; color:#53d18c; }
-    pre { white-space:pre-wrap; background:#07111f; border:1px solid #24364f; padding:18px; border-radius:14px; overflow:auto; }
-    a { color:#72b7ff; }
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <div class="card">
-      <h1>Graza Batch / Wave Ticket Confirmation</h1>
-      <div class="muted">Customer: Drupley Inc / DBA Graza · Assignee: molvera</div>
-      <div class="grid">
-        <div class="stat"><span>Wave plans</span><b>6</b><small>43 orders</small></div>
-        <div class="stat"><span>Batch plans</span><b>2</b><small>7 orders</small></div>
-        <div class="stat"><span>Total plans</span><b>8</b><small>50 orders</small></div>
-        <div class="stat"><span>Status</span><b style="font-size:24px">BUILDING</b><small>Verified in WISE</small></div>
-      </div>
-      <pre># Graza Batch/Wave Confirmation — 2026-05-29
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Graza Batch Wave Tickets</title><style>body{font-family:Arial,sans-serif;background:#07111f;color:#e5edf7;margin:0}.wrap{max-width:1200px;margin:auto;padding:32px}.card{background:#0f1b2d;border:1px solid #24364f;border-radius:16px;padding:22px;margin:18px 0}h1{margin-top:0}pre{white-space:pre-wrap;background:#07111f;border:1px solid #24364f;border-radius:12px;padding:16px;overflow:auto}a{color:#80c7ff}.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}.stat{background:#13243a;padding:16px;border-radius:12px;border:1px solid #29405f}.stat b{display:block;font-size:28px;color:#55d88f}</style></head><body><div class="wrap"><h1>Graza Batch / Wave Tickets</h1><p>Repository report site for Drupley Inc / DBA Graza batch and wave automation.</p><div class="stats"><div class="stat"><span>Latest WISE result</span><b>0 eligible</b><small>last immediate run returned no eligible orders</small></div><div class="stat"><span>Schedule</span><b>15 min</b><small>active recurring task</small></div><div class="stat"><span>Assignee</span><b>molvera</b><small>MARTHA OLVERA</small></div></div><div class="card"><h2>Latest Report</h2><pre># Graza DS Batch/Wave Confirmation — 2026-06-18 RUN3 (~06:15 PDT)
 
-Customer: DRUPLEY INC / DBA GRAZA (ORG-747717)  
-Assignee: molvera (userId 4419)  
-Order filter: Outbound orders, statuses IMPORTED/OPEN/COMMITTED, order type DS/dropship, Euromarket designs excluded.
+## Run Summary
+- **Time**: 2026-06-18T06:15:50-07:00
+- **Customer**: ORG-747717 (DRUPLEY INC / DBA GRAZA)
+- **Order Type**: DS (Dropship)
+- **Statuses Filtered**: IMPORTED, OPEN, COMMITTED
+- **Total Orders Found**: 3
+- **Waves Created**: 0
+- **Batches Created**: 1
+- **Label-Note Batches**: 0
+- **Errors**: 0
 
-## Confirmed WISE Creation
+## Wave Analysis
+All 3 orders have **unique item+quantity signatures** — no waves were formed.
 
-Created 8 Order Plans in WISE with `defaultAssigneeUserId=4419` and `defaultReplenishmentTaskAssigneeUserId=4419`.
+| Order | Reference | Items |
+|-------|-----------|-------|
+| DN-5194915 | 742610 | Frizzle 750ml x1, Drizzle 500ml x1, Frizzle Spray 5oz x1, Sizzle 750ml x1 |
+| DN-5194913 | 742609 | Single Funnel OXO x1, Drizzle 500ml x1, Drizzle Refill x1, Sizzle 750ml x1, Sizzle Refill x1 |
+| DN-5194909 | 742608 | Frizzle Spray 5oz x6 |
 
-### Waves — 6
-- PLAN-5069227 — 2 orders: DN-5186797, DN-5186744
-- PLAN-5069228 — 29 orders: DN-5186795, DN-5186792, DN-5186789, DN-5186786, DN-5186784, DN-5186781, DN-5186780, DN-5186779, DN-5186771, DN-5186770, DN-5186767, DN-5186761, DN-5186760, DN-5186758, DN-5186757, DN-5186752, DN-5186751, DN-5186749, DN-5186748, DN-5186747, DN-5186746, DN-5186743, DN-5186742, DN-5186735, DN-5186734, DN-5186732, DN-5186731, DN-5186730, DN-5186729
-- PLAN-5069229 — 4 orders: DN-5186785, DN-5186762, DN-5186759, DN-5186750
-- PLAN-5069230 — 3 orders: DN-5186783, DN-5186774, DN-5186728
-- PLAN-5069231 — 3 orders: DN-5186775, DN-5186756, DN-5186741
-- PLAN-5069232 — 2 orders: DN-5186769, DN-5186768
+## Batch Created
+| Field | Value |
+|-------|-------|
+| **Setting Name** | Graza DS Batch |
+| **Setting ID** | 1246 |
+| **Plan ID** | PLAN-5072718 |
+| **Task IDs** | TASK-5294822 |
+| **Status** | RELEASED |
+| **Assignee** | molvera / MARTHA OLVERA |
+| **Pick Method** | BATCH_ORDER_PICK |
+| **Pick Type** | PIECE_PICK |
+| **Orders** | DN-5194915, DN-5194909, DN-5194913 |
 
-### Batches — 2
-- PLAN-5069233 — label-note batch — 3 orders: DN-5186766, DN-5186765, DN-5186764
-- PLAN-5069234 — remaining batch — 4 orders: DN-5186794, DN-5186793, DN-5186745, DN-5186733
-
-## Verification
-
-Each plan was verified via WISE order-plan info API. All 8 plans returned successfully with status `BUILDING`, the expected order IDs, and `defaultAssigneeUserId=4419`.
-
-## Operational Note
-
-Pick task creation/release was attempted but WISE rejected it because these order plans are still in `BUILDING` status. WISE requires the order plan to reach `PICK_SUGGESTED` before pick tasks can be created and `TASK_CREATED` before release. No pick tasks were created by this run.
-</pre>
-    </div>
-  </div>
-</body>
-</html>
+## Confirmed Totals
+- **Waves**: 0
+- **Batches**: 1
+- **Total Orders Dispatched**: 3
+- **Assignee**: molvera / MARTHA OLVERA
+- **Errors**: 0
+</pre></div><div class="card"><h2>All Reports</h2><ul><li><a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-18_RUN3.md">GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-18_RUN3.md</a></li>
+<li><a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-18.md">GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-18.md</a></li>
+<li><a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-05_RUN9.md">GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-05_RUN9.md</a></li>
+<li><a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-05_RUN8.md">GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-05_RUN8.md</a></li>
+<li><a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-05_RUN12.md">GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-05_RUN12.md</a></li>
+<li><a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-05_RUN11.md">GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-05_RUN11.md</a></li>
+<li><a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-05_RUN10.md">GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-05_RUN10.md</a></li>
+<li><a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-04_RUN7.md">GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-04_RUN7.md</a></li>
+<li><a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-04_RUN6.md">GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-04_RUN6.md</a></li>
+<li><a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-04_RUN5.md">GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-04_RUN5.md</a></li>
+<li><a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-04_RUN4.md">GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-04_RUN4.md</a></li>
+<li><a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-04_RUN3.md">GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-04_RUN3.md</a></li>
+<li><a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-02_RUN2.md">GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-02_RUN2.md</a></li>
+<li><a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-02.md">GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-02.md</a></li>
+<li><a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-05-30.md">GRAZA_BATCH_WAVE_CONFIRMATION_2026-05-30.md</a></li>
+<li><a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-05-29.md">GRAZA_BATCH_WAVE_CONFIRMATION_2026-05-29.md</a></li></ul></div></div></body></html>

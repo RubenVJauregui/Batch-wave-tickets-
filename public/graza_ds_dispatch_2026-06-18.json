@@ -1,0 +1,66 @@
+{
+  "run_time": "2026-06-18T06:15:50-07:00",
+  "customer": "ORG-747717 (DRUPLEY INC / DBA GRAZA)",
+  "order_type": "DS",
+  "statuses_filtered": ["IMPORTED", "OPEN", "COMMITTED"],
+  "total_orders_found": 3,
+  "label_note_orders": 0,
+  "wave_groups": 0,
+  "waves_created": [],
+  "batches": [
+    {
+      "setting_id": 1246,
+      "setting_name": "Graza DS Batch",
+      "plan_id": "PLAN-5072718",
+      "task_ids": ["TASK-5294822"],
+      "assignee_userId": "4419",
+      "assignee_name": "molvera / MARTHA OLVERA",
+      "status": "RELEASED",
+      "pick_method": "BATCH_ORDER_PICK",
+      "pick_type": "PIECE_PICK",
+      "order_ids": ["DN-5194915", "DN-5194909", "DN-5194913"],
+      "errors": 0,
+      "exceptions": 0,
+      "failed_commitments": 0
+    }
+  ],
+  "order_details": [
+    {
+      "order_id": "DN-5194915",
+      "reference_no": "742610",
+      "status": "COMMITTED",
+      "label_note": null,
+      "items": [
+        {"item_id": "ITEM-2352265", "qty": 1, "description": "Frizzle Bottle, 750ml"},
+        {"item_id": "ITEM-2352258", "qty": 1, "description": "Drizzle Bottle, 500ml"},
+        {"item_id": "ITEM-2352266", "qty": 1, "description": "Frizzle Spray Can, 5oz"},
+        {"item_id": "ITEM-2352257", "qty": 1, "description": "Sizzle Bottle, 750ml"}
+      ],
+      "item_signature": "ITEM-2352265:1|ITEM-2352258:1|ITEM-2352266:1|ITEM-2352257:1"
+    },
+    {
+      "order_id": "DN-5194913",
+      "reference_no": "742609",
+      "status": "COMMITTED",
+      "label_note": null,
+      "items": [
+        {"item_id": "ITEM-2352276", "qty": 1, "description": "Single Funnel, OXO"},
+        {"item_id": "ITEM-2352258", "qty": 1, "description": "Drizzle Bottle, 500ml"},
+        {"item_id": "ITEM-2352262", "qty": 1, "description": "Drizzle Refill Can"},
+        {"item_id": "ITEM-2352257", "qty": 1, "description": "Sizzle Bottle, 750ml"},
+        {"item_id": "ITEM-2352263", "qty": 1, "description": "Sizzle Refill Can"}
+      ],
+      "item_signature": "ITEM-2352276:1|ITEM-2352258:1|ITEM-2352262:1|ITEM-2352257:1|ITEM-2352263:1"
+    },
+    {
+      "order_id": "DN-5194909",
+      "reference_no": "742608",
+      "status": "COMMITTED",
+      "label_note": null,
+      "items": [
+        {"item_id": "ITEM-2352266", "qty": 6, "description": "Frizzle Spray Can, 5oz"}
+      ],
+      "item_signature": "ITEM-2352266:6"
+    }
+  ]
+}

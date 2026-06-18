@@ -1,0 +1,42 @@
+{
+  "runDate": "2026-06-18",
+  "runTime": "~04:30 PT",
+  "customer": "DRUPLEY INC / DBA GRAZA",
+  "customerId": "ORG-747717",
+  "ordersFound": 1,
+  "orders": [
+    {
+      "orderId": "DN-5194900",
+      "status": "COMMITTED",
+      "items": [
+        { "sku": "ITEM-2352262", "qty": 1 },
+        { "sku": "ITEM-2352263", "qty": 2 },
+        { "sku": "ITEM-2352266", "qty": 1 },
+        { "sku": "ITEM-2352267", "qty": 1 }
+      ],
+      "labelNote": null
+    }
+  ],
+  "waveGroups": [],
+  "batches": [
+    {
+      "planId": "PLAN-5072703",
+      "taskId": "TASK-5294800",
+      "setting": "#1246 Graza DS Batch",
+      "pickMethod": "BATCH_ORDER_PICK",
+      "assignee": "molvera / MARTHA OLVERA",
+      "assigneeId": 4419,
+      "status": "RELEASED",
+      "orderCount": 1,
+      "orderIds": ["DN-5194900"]
+    }
+  ],
+  "summary": {
+    "totalOrders": 1,
+    "totalPlans": 1,
+    "wavePlans": 0,
+    "batchPlans": 1,
+    "totalTasks": 1,
+    "errors": 0
+  }
+}
