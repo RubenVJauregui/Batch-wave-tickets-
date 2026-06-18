@@ -1,0 +1,84 @@
+{
+  "run_time": "2026-06-18T12:19:00-07:00",
+  "customer": "ORG-747717 (DRUPLEY INC / DBA GRAZA)",
+  "order_type": "DS",
+  "statuses_filtered": ["IMPORTED", "OPEN", "COMMITTED"],
+  "total_orders_found": 4,
+  "label_note_orders": 1,
+  "wave_groups": 0,
+  "waves_created": [],
+  "batches": [
+    {
+      "setting_id": 1246,
+      "setting_name": "Graza DS Batch",
+      "plan_id": "PLAN-5072922",
+      "task_ids": ["TASK-5295388"],
+      "assignee_userId": "4419",
+      "assignee_name": "molvera / MARTHA OLVERA",
+      "status": "RELEASED",
+      "pick_method": "BATCH_ORDER_PICK",
+      "pick_type": "PIECE_PICK",
+      "order_ids": ["DN-5195261", "DN-5195242", "DN-5195240", "DN-5195234"],
+      "errors": 0,
+      "exceptions": 0,
+      "failed_commitments": 0
+    }
+  ],
+  "rule_violations": [
+    {
+      "rule": 3,
+      "description": "Label notes/gift notes: orders with label notes must be separated into their own batch(es)",
+      "order_id": "DN-5195234",
+      "note": "birthday gift message",
+      "issue": "Included with non-label-note orders in batch PLAN-5072922. Setting 1246 does not support per-order exclusion; label-note orders must be pre-filtered before dispatch."
+    }
+  ],
+  "order_details": [
+    {
+      "order_id": "DN-5195261",
+      "reference_no": null,
+      "status": "COMMITTED",
+      "label_note": null,
+      "items": [
+        {"item_id": "ITEM-2352262", "qty": 1, "description": "Drizzle"},
+        {"item_id": "ITEM-2352263", "qty": 1, "description": "Sizzle"}
+      ],
+      "item_signature": "ITEM-2352262:1|ITEM-2352263:1"
+    },
+    {
+      "order_id": "DN-5195242",
+      "reference_no": null,
+      "status": "COMMITTED",
+      "label_note": null,
+      "items": [
+        {"item_id": "ITEM-2352262", "qty": 2, "description": "Drizzle"},
+        {"item_id": "ITEM-2352263", "qty": 1, "description": "Sizzle"},
+        {"item_id": "ITEM-2352264", "qty": 1, "description": "Sizzle Refill"},
+        {"item_id": "ITEM-2352265", "qty": 1, "description": "Frizzle"}
+      ],
+      "item_signature": "ITEM-2352262:2|ITEM-2352263:1|ITEM-2352264:1|ITEM-2352265:1"
+    },
+    {
+      "order_id": "DN-5195240",
+      "reference_no": null,
+      "status": "COMMITTED",
+      "label_note": null,
+      "items": [
+        {"item_id": "ITEM-2352262", "qty": 1, "description": "Drizzle"},
+        {"item_id": "ITEM-2352263", "qty": 2, "description": "Sizzle"},
+        {"item_id": "ITEM-2352264", "qty": 2, "description": "Sizzle Refill"}
+      ],
+      "item_signature": "ITEM-2352262:1|ITEM-2352263:2|ITEM-2352264:2"
+    },
+    {
+      "order_id": "DN-5195234",
+      "reference_no": null,
+      "status": "COMMITTED",
+      "label_note": "birthday gift message",
+      "items": [
+        {"item_id": "ITEM-2352266", "qty": 1, "description": "Frizzle"}
+      ],
+      "item_signature": "ITEM-2352266:1"
+    }
+  ]
+}
