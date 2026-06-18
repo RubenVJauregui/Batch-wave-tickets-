@@ -1,45 +1,73 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Graza Batch Wave Tickets</title><style>body{font-family:Arial,sans-serif;background:#07111f;color:#e5edf7;margin:0}.wrap{max-width:1200px;margin:auto;padding:32px}.card{background:#0f1b2d;border:1px solid #24364f;border-radius:16px;padding:22px;margin:18px 0}h1{margin-top:0}pre{white-space:pre-wrap;background:#07111f;border:1px solid #24364f;border-radius:12px;padding:16px;overflow:auto}a{color:#80c7ff}.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}.stat{background:#13243a;padding:16px;border-radius:12px;border:1px solid #29405f}.stat b{display:block;font-size:28px;color:#55d88f}</style></head><body><div class="wrap"><h1>Graza Batch / Wave Tickets</h1><p>Repository report site for Drupley Inc / DBA Graza batch and wave automation.</p><div class="stats"><div class="stat"><span>Latest WISE result</span><b>0 eligible</b><small>last immediate run returned no eligible orders</small></div><div class="stat"><span>Schedule</span><b>15 min</b><small>active recurring task</small></div><div class="stat"><span>Assignee</span><b>molvera</b><small>MARTHA OLVERA</small></div></div><div class="card"><h2>Latest Report</h2><pre># Graza DS Batch/Wave Confirmation — 2026-06-18 RUN3 (~06:15 PDT)
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Graza Batch Wave Tickets</title><style>body{font-family:Arial,sans-serif;background:#07111f;color:#e5edf7;margin:0}.wrap{max-width:1200px;margin:auto;padding:32px}.card{background:#0f1b2d;border:1px solid #24364f;border-radius:16px;padding:22px;margin:18px 0}h1{margin-top:0}pre{white-space:pre-wrap;background:#07111f;border:1px solid #24364f;border-radius:12px;padding:16px;overflow:auto}a{color:#80c7ff}.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}.stat{background:#13243a;padding:16px;border-radius:12px;border:1px solid #29405f}.stat b{display:block;font-size:28px;color:#55d88f}</style></head><body><div class="wrap"><h1>Graza Batch / Wave Tickets</h1><p>Repository report site for Drupley Inc / DBA Graza batch and wave automation.</p><div class="stats"><div class="stat"><span>Latest update</span><b>18.xlsx</b><small>issue review and remediation rules added</small></div><div class="stat"><span>Schedule</span><b>15 min</b><small>active recurring task</small></div><div class="stat"><span>Assignee</span><b>4419</b><small>MARTHA OLVERA / molvera</small></div></div><div class="card"><h2>Latest Issue Review</h2><pre># Graza Issue Review — 2026-06-18 — 18.xlsx
 
-## Run Summary
-- **Time**: 2026-06-18T06:15:50-07:00
-- **Customer**: ORG-747717 (DRUPLEY INC / DBA GRAZA)
-- **Order Type**: DS (Dropship)
-- **Statuses Filtered**: IMPORTED, OPEN, COMMITTED
-- **Total Orders Found**: 3
-- **Waves Created**: 0
-- **Batches Created**: 1
-- **Label-Note Batches**: 0
-- **Errors**: 0
+Source: `18.xlsx` report from Ruben / Martha feedback.
 
-## Wave Analysis
-All 3 orders have **unique item+quantity signatures** — no waves were formed.
+## Reported Issues
 
-| Order | Reference | Items |
-|-------|-----------|-------|
-| DN-5194915 | 742610 | Frizzle 750ml x1, Drizzle 500ml x1, Frizzle Spray 5oz x1, Sizzle 750ml x1 |
-| DN-5194913 | 742609 | Single Funnel OXO x1, Drizzle 500ml x1, Drizzle Refill x1, Sizzle 750ml x1, Sizzle Refill x1 |
-| DN-5194909 | 742608 | Frizzle Spray 5oz x6 |
+- Orders dropped but stayed in `PLANNING` until manually released.
+- Several plans/orders did not get assigned to `molvera`.
+- Wave labels printed **1 label per item** instead of **1 label per customer/order recipient**.
+- Label notes could not be printed for some label-note orders.
 
-## Batch Created
-| Field | Value |
-|-------|-------|
-| **Setting Name** | Graza DS Batch |
-| **Setting ID** | 1246 |
-| **Plan ID** | PLAN-5072718 |
-| **Task IDs** | TASK-5294822 |
-| **Status** | RELEASED |
-| **Assignee** | molvera / MARTHA OLVERA |
-| **Pick Method** | BATCH_ORDER_PICK |
-| **Pick Type** | PIECE_PICK |
-| **Orders** | DN-5194915, DN-5194909, DN-5194913 |
+## WISE Findings
 
-## Confirmed Totals
-- **Waves**: 0
-- **Batches**: 1
-- **Total Orders Dispatched**: 3
-- **Assignee**: molvera / MARTHA OLVERA
-- **Errors**: 0
-</pre></div><div class="card"><h2>All Reports</h2><ul><li><a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-18_RUN3.md">GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-18_RUN3.md</a></li>
+Reviewed LT_F1 Graza plans from the report:
+
+- `PLAN-5072874`
+- `PLAN-5072875`
+- `PLAN-5072876`
+- `PLAN-5072877`
+- `PLAN-5072914`
+
+Root cause identified by WMS review:
+
+1. The affected plans were created with a direct order-plan flow rather than the full Graza dispatch/release workflow.
+2. Direct plan creation left plans without completed pick strategy/task/release steps until manual handling.
+3. Some plans had missing assignment or incorrect assignment representation.
+4. `PLAN-5072914` used text `molvera` instead of WMS userId `4419`, and remained stuck in `BUILDING` with no task IDs.
+5. Wave settings were not fully applied; `skipPackingScanForItem` was not confirmed ON, which caused item-level label behavior.
+6. True label-note orders, such as `DN-5195222`, were not handled through the label-note-specific workflow.
+
+## Corrected Recurring Task Rules
+
+The active Graza scheduled task was updated to require:
+
+- Use the full Graza dispatch/release workflow/settings that creates:
+  - pick strategy
+  - task
+  - release
+- Do **not** use direct `/order-plan/create` alone.
+- Assign using WMS userId `4419` / `MARTHA OLVERA (molvera)`, not username text.
+- Verify every created plan/task is assigned to `4419` and reaches `RELEASED` or `COMPLETED` with task IDs.
+- Do not leave plans in `BUILDING`, `PLANNING`, or `PICK_SUGGESTED`.
+- For waves:
+  - group by exact complete item/SKU set and exact quantity per item
+  - item order does not matter
+  - use `Wave Pick By Item`
+  - turn ON `Skip Packing Scan For Item`
+  - configure labels as 1 label per customer/order recipient, not 1 label per item
+  - waves are not limited to 22 orders
+- For label/gift notes:
+  - separate true `labelNote` / gift-note orders into their own label-note batch workflow
+  - verify the label note is printable
+  - if printing fails, report exact order IDs and WISE error
+- For batches:
+  - only non-wave and non-label-note orders
+  - max 22 orders per batch
+  - oldest create date first
+
+## Safe Correction Status
+
+- `PLAN-5072874/75/76/77`: not safe to alter after manual release/completion.
+- `PLAN-5072914`: identified as stuck; correction requires rollback/cancel and recreation through the proper dispatch workflow with userId `4419` and wave settings. Mutation was not performed without explicit approval.
+
+## Active Automation
+
+Active task: `4ohR10kY6NbMAlFd1_D1l`  
+Schedule: every 15 minutes  
+Assignee: `MARTHA OLVERA (molvera)` / WMS userId `4419`
+</pre></div><div class="card"><h2>All Reports</h2><ul><li><a href="/GRAZA_ISSUE_REVIEW_2026-06-18_18XLSX.md">GRAZA_ISSUE_REVIEW_2026-06-18_18XLSX.md</a></li>
+<li><a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-18_RUN3.md">GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-18_RUN3.md</a></li>
 <li><a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-18.md">GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-18.md</a></li>
 <li><a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-05_RUN9.md">GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-05_RUN9.md</a></li>
 <li><a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-05_RUN8.md">GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-05_RUN8.md</a></li>
