@@ -1,0 +1,53 @@
+{
+  "run_time": "2026-06-19T06:54:00-07:00",
+  "customer": "ORG-747717 (DRUPLEY INC / DBA GRAZA)",
+  "order_type": "DS",
+  "statuses_filtered": ["IMPORTED", "OPEN", "COMMITTED"],
+  "total_orders_found": 1,
+  "label_note_orders": 0,
+  "wave_groups": 0,
+  "waves_created": [],
+  "batches": [
+    {
+      "setting_id": 1246,
+      "setting_name": "Graza DS Batch",
+      "plan_id": "PLAN-5073033",
+      "task_ids": ["TASK-5295922"],
+      "assignee_userId": "4419",
+      "assignee_name": "molvera / MARTHA OLVERA",
+      "status": "RELEASED",
+      "pick_method": "BATCH_ORDER_PICK",
+      "pick_type": "PIECE_PICK",
+      "order_ids": ["DN-5195597"],
+      "errors": 0,
+      "exceptions": 0,
+      "failed_commitments": 0
+    }
+  ],
+  "verification": {
+    "plan_status": "RELEASED",
+    "task_assigned_to_4419": true,
+    "no_orders_to_exception": true,
+    "no_failed_inventory_commitments": true,
+    "rules_compliant": true
+  },
+  "order_details": [
+    {
+      "order_id": "DN-5195597",
+      "reference_no": "743006",
+      "status": "COMMITTED",
+      "label_note": null,
+      "gift_message": null,
+      "ship_to": "Tony Ford, 11962 Droxford St, Artesia CA 90701",
+      "channel": "Cin7_Omni",
+      "items": [
+        {"item_id": "ITEM-2352257", "qty": 2, "description": "Sizzle", "sku": "D1-SZL750", "upc": "195893194391"}
+      ],
+      "item_signature": "ITEM-2352257:2"
+    }
+  ],
+  "unresolved": {
+    "martha_18xlsx": "Issue report 18.xlsx rules already applied; no new issues found in this run",
+    "label_note_orders": "None found"
+  }
+}
