@@ -1,0 +1,97 @@
+{
+  "runDate": "2026-06-20",
+  "customer": "DRUPLEY INC / DBA GRAZA",
+  "customerId": "ORG-747717",
+  "channel": "Cin7_Omni",
+  "dispatchSetting": 1246,
+  "dispatchMethod": "BATCH_ORDER_PICK",
+  "dispatchedBy": "rjauregui",
+  "assignee": {
+    "userId": 4419,
+    "userName": "molvera",
+    "fullName": "MARTHA OLVERA"
+  },
+  "plans": [
+    {
+      "planId": "PLAN-5073227",
+      "orderIds": ["DN-5196042"],
+      "orderCount": 1,
+      "taskId": "TASK-5296746",
+      "status": "RELEASED",
+      "assigneeId": 4419,
+      "skipPackingScanForItem": true,
+      "pickMethod": "BATCH_ORDER_PICK",
+      "labelNoteOrders": []
+    },
+    {
+      "planId": "PLAN-5073224",
+      "orderIds": ["DN-5196040", "DN-5196041"],
+      "orderCount": 2,
+      "taskId": "TASK-5296745",
+      "status": "RELEASED",
+      "assigneeId": 4419,
+      "skipPackingScanForItem": true,
+      "pickMethod": "BATCH_ORDER_PICK",
+      "labelNoteOrders": []
+    },
+    {
+      "planId": "PLAN-5073223",
+      "orderIds": ["DN-5196037"],
+      "orderCount": 1,
+      "taskId": "TASK-5296736",
+      "status": "RELEASED",
+      "assigneeId": 4419,
+      "skipPackingScanForItem": true,
+      "pickMethod": "BATCH_ORDER_PICK",
+      "labelNoteOrders": []
+    },
+    {
+      "planId": "PLAN-5073222",
+      "orderIds": ["DN-5196029", "DN-5196030", "DN-5196031", "DN-5196032", "DN-5196033"],
+      "orderCount": 5,
+      "taskId": "TASK-5296733",
+      "status": "RELEASED",
+      "assigneeId": 4419,
+      "skipPackingScanForItem": true,
+      "pickMethod": "BATCH_ORDER_PICK",
+      "labelNoteOrders": [
+        { "orderId": "DN-5196029", "labelNote": "To: Howie" }
+      ]
+    },
+    {
+      "planId": "PLAN-5073221",
+      "orderIds": ["DN-5195982", "DN-5195983", "DN-5195984", "DN-5195985", "DN-5195986", "DN-5195987", "DN-5195988", "DN-5196006", "DN-5196013", "DN-5196036"],
+      "orderCount": 10,
+      "taskId": "TASK-5296725",
+      "status": "RELEASED",
+      "assigneeId": 4419,
+      "skipPackingScanForItem": true,
+      "pickMethod": "BATCH_ORDER_PICK",
+      "labelNoteOrders": [
+        { "orderId": "DN-5196006", "labelNote": "To William" },
+        { "orderId": "DN-5196013", "labelNote": "To: Carl and Chad" }
+      ]
+    }
+  ],
+  "summary": {
+    "totalPlans": 5,
+    "totalOrders": 19,
+    "waveGroups": 0,
+    "batches": 5,
+    "allReleased": true,
+    "allCorrectAssignee": true
+  },
+  "issues": {
+    "labelNoteOrdersNotSeparated": ["DN-5196029", "DN-5196006", "DN-5196013"],
+    "noWaveGroupsCreated": true,
+    "legacySkipPackingScanNull": ["PLAN-5073177", "PLAN-5073159", "PLAN-5073147", "PLAN-5073146", "PLAN-5073145", "PLAN-5073144"],
+    "cancelledPlansYesterday": ["PLAN-5073121", "PLAN-5073122", "PLAN-5073123", "PLAN-5073124", "PLAN-5073093", "PLAN-5073097", "PLAN-5073098", "PLAN-5073099", "PLAN-5073064", "PLAN-5073060"]
+  },
+  "searchStats": {
+    "totalOrdersScanned": 45268,
+    "pagesScanned": 453,
+    "targetStatuses": ["IMPORTED", "OPEN", "COMMITTED"],
+    "ordersInTargetStatuses": 0,
+    "exceptionOrders": 0
+  }
+}
