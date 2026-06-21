@@ -1,0 +1,26 @@
+{
+  "runTimestamp": "2026-06-21T02:01:00Z",
+  "runTimestampLocal": "2026-06-20 19:01 PT",
+  "summary": {
+    "totalOrdersFound": 3,
+    "ordersDispatched": 3,
+    "planId": "PLAN-5073267",
+    "taskId": "TASK-5296849",
+    "status": "RELEASED",
+    "pickMethod": "BATCH_ORDER_PICK",
+    "pickType": "PIECE_PICK",
+    "assigneeId": 4419,
+    "assigneeName": "MARTHA OLVERA",
+    "skipPackingScanForItem": true,
+    "waves": 0,
+    "labelNoteBatches": 0,
+    "exceptions": 0,
+    "failures": 0
+  },
+  "orders": [
+    { "orderId": "DN-5196562", "reference": "743590", "items": "ITEM-2352264 qty1, ITEM-2352266 qty1", "labelNote": null },
+    { "orderId": "DN-5196563", "reference": "743592", "items": "ITEM-2352257 qty1", "labelNote": null },
+    { "orderId": "DN-5196564", "reference": "743593", "items": "ITEM-2352257 qty1, ITEM-2352266 qty6", "labelNote": null }
+  ],
+  "setting": { "id": 1246, "name": "Graza DS Batch" }
+}

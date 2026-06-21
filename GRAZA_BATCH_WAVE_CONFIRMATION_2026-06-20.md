@@ -1,44 +1,41 @@
-# Graza DS Dispatch — 2026-06-20
+# Graza Batch/Wave Dispatch Confirmation — June 20, 2026 ~19:01 PT
 
 ## Run Summary
 
-| Field | Value |
+| Metric | Value |
 |---|---|
-| **Run Date** | 2026-06-20 ~12:47 PM PDT |
-| **Tenant** | LT |
-| **Facility** | LT_F1 (Valley View) |
-| **Customer** | DRUPLEY INC / DBA GRAZA (ORG-747717) |
-| **Orders Found** | 3 (all COMMITTED Dropship) |
-| **Batch Setting** | 1246 "Graza DS Batch" |
-| **Plan ID** | PLAN-5073254 |
-| **Task ID** | TASK-5296818 |
-| **Plan Status** | RELEASED ✅ |
-| **Assignee** | 4419 / MARTHA OLVERA ✅ |
+| **Total Orders Found** | 3 (all COMMITTED) |
+| **Orders Dispatched** | 3/3 (100%) |
+| **Plan ID** | PLAN-5073267 |
+| **Task ID** | TASK-5296849 |
+| **Status** | RELEASED |
 | **Pick Method** | BATCH_ORDER_PICK |
 | **Pick Type** | PIECE_PICK |
-| **skipPackingScanForItem** | true ✅ |
-| **Wave Groups** | 0 |
-| **Label Note Orders** | 0 |
+| **Assignee** | 4419 / MARTHA OLVERA (molvera) |
+| **skipPackingScanForItem** | true |
+| **Orders in Batch** | DN-5196562, DN-5196563, DN-5196564 |
+| **Waves** | 0 (no matching item+quantity combos) |
+| **Label Note Batches** | 0 (no label notes) |
 | **Exceptions** | 0 |
-| **Inventory Failures** | 0 |
+| **Failures** | 0 |
+| **Plans Stuck** | 0 |
 
 ## Order Details
 
-| Order ID | Recipient | Items | Status |
+| Order ID | Reference | Items | Label Note |
 |---|---|---|---|
-| DN-5196446 | Becky Thomas | ITEM-2352264 ×1 | PLANNED |
-| DN-5196447 | Tiffani Schmidt | ITEM-2352262 ×2, ITEM-2352263 ×2 | PLANNED |
-| DN-5196448 | Kathleen Angelo | ITEM-2352257 ×1, ITEM-2352266 ×1, ITEM-2352258 ×1, ITEM-2352265 ×1 | PLANNED |
+| DN-5196562 | 743590 | ITEM-2352264 (Frizzle Jug) qty1, ITEM-2352266 (Frizzle Spray) qty1 | null |
+| DN-5196563 | 743592 | ITEM-2352257 (Sizzle) qty1 | null |
+| DN-5196564 | 743593 | ITEM-2352257 (Sizzle) qty1, ITEM-2352266 (Frizzle Spray) qty6 | null |
 
 ## Wave Analysis
-- **0 wave groups** — all 3 orders have different item sets. No two orders share the exact same items + quantities.
 
-## Label Notes
-- **0 label-note orders** — none of the 3 have `labelNote` set.
+No wave groups formed — all 3 orders have different item+quantity combinations. None share the exact same SKU set with matching quantities.
 
-## Issues
-- **None** — all 3 orders dispatched cleanly with zero errors.
+## Settings Used
 
-## Plan Links
-- Plan: https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5073254
-- Task: https://unis.item.com/wms/task/general-task/edit/TASK-5296818
+Setting **1246 "Graza DS Batch"** — full dispatch/release workflow (pick strategy → task → release).
+
+## Issues / Blockers
+
+None. Clean run.
