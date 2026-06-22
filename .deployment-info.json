@@ -3,11 +3,13 @@
   "appName": "batch-wave-tickets-a6cbec",
   "repoUrl": "https://github.com/atlas-workspace/batch-wave-tickets-a6cbec.git",
   "originalRepoUrl": "https://github.com/RubenVJauregui/Batch-wave-tickets-.git",
-  "esaoncRepoUrl": "https://github.com/esaonc-ai/Batch-wave-tickets-.git",
   "port": 3000,
   "buildPack": "dockerfile",
   "databaseStatus": "none",
-  "lastAttempt": "2026-06-22T02:57:00Z",
-  "status": "coolify-github-app-not-found",
-  "note": "Coolify GitHub App cannot see repos in atlas-workspace, RubenVJauregui, or esaonc-ai orgs. All three repos have identical RUN14 code. Manual Coolify GitHub App reauthorization needed."
+  "lastAttempt": "2026-06-22T03:16:30Z",
+  "status": "coolify-504-gateway-timeout",
+  "note": "Coolify create returning 504 Gateway Timeout. Both repos (RubenVJauregui + atlas-workspace mirrors) synced with RUN15 code. Pending retry.",
+  "latestRun": "RUN15",
+  "latestPlan": "PLAN-5073369",
+  "latestTask": "TASK-5297026"
 }
