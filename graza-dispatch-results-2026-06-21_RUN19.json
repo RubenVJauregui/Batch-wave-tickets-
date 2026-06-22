@@ -1,0 +1,64 @@
+{
+  "run": "RUN19",
+  "timestamp": "2026-06-21T21:35:00-07:00",
+  "facility": "LT_F1",
+  "customer": "ORG-747717",
+  "customerName": "DRUPLEY INC / DBA GRAZA",
+  "assignee": {
+    "userId": 4419,
+    "username": "molvera",
+    "fullName": "MARTHA OLVERA"
+  },
+  "searchFilter": {
+    "statuses": ["IMPORTED", "OPEN", "COMMITTED"],
+    "orderType": "DS",
+    "customerId": "ORG-747717"
+  },
+  "newOrdersFound": 2,
+  "classification": {
+    "labelNoteOrders": 0,
+    "waveGroups": 0,
+    "batchOrders": 2
+  },
+  "dispatch": {
+    "setting": "1246",
+    "settingName": "Graza DS Batch",
+    "newPlans": [
+      {
+        "planId": "PLAN-5073371",
+        "planUrl": "https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5073371",
+        "planStatus": "RELEASED",
+        "pickMethod": "BATCH_ORDER_PICK",
+        "skipPackingScanForItem": true,
+        "assigneeUserId": 4419,
+        "orders": [
+          {"orderId": "DN-5197156", "recipient": "Harsha Chalasani", "created": "~04:20"},
+          {"orderId": "DN-5197161", "recipient": "James campagnone", "created": "~04:30"}
+        ],
+        "taskId": "TASK-5297028",
+        "taskUrl": "https://unis.item.com/wms/task/general-task/edit/TASK-5297028",
+        "taskStatus": "NEW"
+      }
+    ]
+  },
+  "totals": {
+    "totalActivePlans": 16,
+    "totalActiveTasks": 16,
+    "wavePlans": 2,
+    "batchPlans": 14,
+    "exceptions": 0,
+    "errors": 0,
+    "labelNoteOrders": 0
+  },
+  "compliance": {
+    "rule1_fullWorkflow": true,
+    "rule2_assigneeUserId4419": true,
+    "rule3_noStuckPlans": true,
+    "rule4_noFalseExceptions": true,
+    "rule5_labelNoteSeparation": "N/A",
+    "rule6_waveCorrect": "N/A",
+    "rule7_batchCompliant": true,
+    "rule8_skipPackingScan": true,
+    "allPassed": true
+  }
+}
