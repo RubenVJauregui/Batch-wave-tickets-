@@ -1,0 +1,76 @@
+{
+  "run": "RUN21",
+  "timestamp": "2026-06-22T06:03:00Z",
+  "timestampLocal": "2026-06-21T23:03:00-07:00",
+  "facility": "LT_F1",
+  "customer": "DRUPLEY INC / DBA GRAZA",
+  "customerOrgId": "ORG-747717",
+  "assignee": {
+    "userId": 4419,
+    "name": "MARTHA OLVERA",
+    "username": "molvera"
+  },
+  "searchFilter": {
+    "statuses": ["IMPORTED", "OPEN", "COMMITTED"],
+    "orderType": "DS",
+    "customer": "ORG-747717"
+  },
+  "newOrders": 1,
+  "totalActivePlans": 17,
+  "totalActiveTasks": 17,
+  "wavePlans": 2,
+  "batchPlans": 15,
+  "labelNoteOrders": 0,
+  "exceptions": 0,
+  "errors": 0,
+  "dispatch": {
+    "settingId": 1246,
+    "settingName": "Graza DS Batch",
+    "workflow": "full-pick-strategy-task-release",
+    "planId": "PLAN-5073373",
+    "planStatus": "RELEASED",
+    "planUrl": "https://unis.item.com/wms/plan/order-plan/edit/PLAN-5073373",
+    "taskId": "TASK-5297030",
+    "taskStatus": "NEW",
+    "taskUrl": "https://unis.item.com/wms/task/general-task/edit/TASK-5297030",
+    "pickMethod": "BATCH_ORDER_PICK",
+    "skipPackingScanForItem": true,
+    "orders": [
+      {
+        "orderId": "DN-5197179",
+        "recipient": "Katie Gallagher",
+        "location": "Bethlehem, PA",
+        "items": [
+          {"itemId": "ITEM-2352268", "name": "Sizzle Glass Bottle 750ml", "quantity": 1},
+          {"itemId": "ITEM-2352269", "name": "Drizzle Glass Bottle 500ml", "quantity": 1}
+        ],
+        "channel": "Cin7_Omni",
+        "shipMethod": "SP",
+        "carrier": "ECON",
+        "labelNote": null,
+        "orderUrl": "https://unis.item.com/wms/order/order/edit/DN-5197179"
+      }
+    ]
+  },
+  "ruleCompliance": {
+    "rule1_fullWorkflow": "PASS",
+    "rule2_assigneeUserId": "PASS",
+    "rule3_noStuckPlans": "PASS",
+    "rule4_noFalseExceptions": "PASS",
+    "rule5_labelNotes": "N/A",
+    "rule6_waveRules": "N/A",
+    "rule7_batchRules": "PASS",
+    "rule8_skipPackingScan": "PASS"
+  },
+  "marthaOlvera18xlsx": {
+    "status": "All rules active and compliant",
+    "issueReport": "GRAZA_ISSUE_REVIEW_2026-06-18_18XLSX.md",
+    "stuckPlans": {
+      "PLAN-5072874": "COMPLETED (previously resolved)",
+      "PLAN-5072875": "COMPLETED (previously resolved)",
+      "PLAN-5072876": "COMPLETED (previously resolved)",
+      "PLAN-5072877": "COMPLETED (previously resolved)",
+      "PLAN-5072914": "Identified stuck — text 'molvera' instead of userId 4419"
+    }
+  }
+}
