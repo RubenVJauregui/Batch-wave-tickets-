@@ -51,118 +51,70 @@ code{background:#13243a;padding:2px 6px;border-radius:4px;font-size:12px}
 <!-- TAB: Latest Run -->
 <div id="tab-run" class="tab-content active">
   <div class="stats">
-    <div class="stat"><span class="val">3</span><span class="lbl">Orders Found</span><span class="lbl2">DS dropship</span></div>
-    <div class="stat"><span class="val">1</span><span class="lbl">Batch Created</span><span class="lbl2">3-order batch</span></div>
-    <div class="stat"><span class="val">0</span><span class="lbl">Wave Groups</span><span class="lbl2">No matching sets</span></div>
-    <div class="stat"><span class="val">0</span><span class="lbl">Label Notes</span><span class="lbl2">None detected</span></div>
-    <div class="stat"><span class="val" style="color:#55d88f">✓</span><span class="lbl">Status</span><span class="lbl2">RELEASED</span></div>
+    <div class="stat"><span class="val">0</span><span class="lbl">Orders Found</span><span class="lbl2">DS dropship</span></div>
+    <div class="stat"><span class="val">0</span><span class="lbl">Batches Created</span><span class="lbl2">No pending orders</span></div>
+    <div class="stat"><span class="val">0</span><span class="lbl">Wave Groups</span><span class="lbl2">No pending orders</span></div>
+    <div class="stat"><span class="val">0</span><span class="lbl">Label Notes</span><span class="lbl2">No pending orders</span></div>
+    <div class="stat"><span class="val" style="color:#55d88f">✓</span><span class="lbl">Status</span><span class="lbl2">ALL CLEAR</span></div>
     <div class="stat"><span class="val" style="color:#55d88f">4419</span><span class="lbl">Assignee</span><span class="lbl2">MARTHA OLVERA</span></div>
   </div>
 
   <div class="card">
-    <h2>Dispatch Results — 2026-06-21 20:08 PDT (RUN15)</h2>
+    <h2>Dispatch Results — 2026-06-21 20:31 PDT (RUN16)</h2>
     <table>
       <tr><th>Field</th><th>Value</th></tr>
-      <tr><td>Plan ID</td><td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5073369" target="_blank">PLAN-5073369</a></td></tr>
-      <tr><td>Task ID</td><td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5297026" target="_blank">TASK-5297026</a></td></tr>
-      <tr><td>Setting</td><td>1246 "Graza DS Batch"</td></tr>
-      <tr><td>Pick Method</td><td>BATCH_ORDER_PICK / PIECE_PICK</td></tr>
-      <tr><td>Status</td><td><span class="badge-ok">RELEASED</span></td></tr>
-      <tr><td>Assignee</td><td>4419 / MARTHA OLVERA ✅</td></tr>
-      <tr><td>Skip Packing Scan</td><td><span class="badge-ok">true</span></td></tr>
-      <tr><td>Auto Release</td><td><span class="badge-ok">true</span></td></tr>
+      <tr><td>Orders Found</td><td><span class="badge-ok">0 — All caught up</span></td></tr>
+      <tr><td>New Plans</td><td>0</td></tr>
+      <tr><td>New Tasks</td><td>0</td></tr>
+      <tr><td>Status</td><td><span class="badge-ok">NO WORK — Everything dispatched</span></td></tr>
       <tr><td>Errors</td><td>0</td></tr>
       <tr><td>Exceptions</td><td>0</td></tr>
-      <tr><td>Failed Commitments</td><td>0</td></tr>
     </table>
   </div>
 
   <div class="card">
-    <h2>Order Detail — 3 Orders</h2>
+    <h2>Prior Active Dispatch Reference</h2>
     <table>
-      <tr><th>Order ID</th><th>Channel</th><th>Ship To</th><th>Item</th><th>SKU</th><th>Qty</th></tr>
+      <tr><th>Run</th><th>Time (PDT)</th><th>Orders</th><th>Plan</th><th>Task</th><th>Status</th></tr>
       <tr>
-        <td><a href="https://unis.item.com/wms/outbound/order/edit/DN-5197129" target="_blank">DN-5197129</a></td>
-        <td>Cin7_Omni</td>
-        <td>Ashley Vanderbosch</td>
-        <td>Sizzle Drizzle</td>
-        <td>D1-SZL750</td>
-        <td>1</td>
+        <td>RUN15</td><td>~20:08</td>
+        <td>3 (DN-5197127/28/29)</td>
+        <td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5073369" target="_blank">PLAN-5073369</a></td>
+        <td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5297026" target="_blank">TASK-5297026</a></td>
+        <td><span class="badge-ok">RELEASED</span></td>
       </tr>
       <tr>
-        <td><a href="https://unis.item.com/wms/outbound/order/edit/DN-5197129" target="_blank">DN-5197129</a></td>
-        <td>Cin7_Omni</td>
-        <td>Ashley Vanderbosch</td>
-        <td>Frizzle Drizzle</td>
-        <td>D1-FZL750</td>
-        <td>1</td>
+        <td>RUN14</td><td>~19:52</td>
+        <td>1 (DN-5197117)</td>
+        <td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5073368" target="_blank">PLAN-5073368</a></td>
+        <td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5297025" target="_blank">TASK-5297025</a></td>
+        <td><span class="badge-ok">RELEASED</span></td>
       </tr>
       <tr>
-        <td><a href="https://unis.item.com/wms/outbound/order/edit/DN-5197129" target="_blank">DN-5197129</a></td>
-        <td>Cin7_Omni</td>
-        <td>Ashley Vanderbosch</td>
-        <td>Frizzle Spray</td>
-        <td>S1-FZL142</td>
-        <td>1</td>
-      </tr>
-      <tr>
-        <td><a href="https://unis.item.com/wms/outbound/order/edit/DN-5197129" target="_blank">DN-5197129</a></td>
-        <td>Cin7_Omni</td>
-        <td>Ashley Vanderbosch</td>
-        <td>Drizzle Drizzle</td>
-        <td>D1-DRZ500</td>
-        <td>1</td>
-      </tr>
-      <tr>
-        <td><a href="https://unis.item.com/wms/outbound/order/edit/DN-5197128" target="_blank">DN-5197128</a></td>
-        <td>Cin7_Omni</td>
-        <td>Michael Finger</td>
-        <td>Sizzle Drizzle</td>
-        <td>D1-SZL750</td>
-        <td>2</td>
-      </tr>
-      <tr>
-        <td><a href="https://unis.item.com/wms/outbound/order/edit/DN-5197128" target="_blank">DN-5197128</a></td>
-        <td>Cin7_Omni</td>
-        <td>Michael Finger</td>
-        <td>Glass Drizzle</td>
-        <td>GL1-DRZ500</td>
-        <td>1</td>
-      </tr>
-      <tr>
-        <td><a href="https://unis.item.com/wms/outbound/order/edit/DN-5197127" target="_blank">DN-5197127</a></td>
-        <td>Cin7_Omni</td>
-        <td>Ankit Etha</td>
-        <td>Jug Frizzle</td>
-        <td>J1-FZL2000</td>
-        <td>1</td>
-      </tr>
-      <tr>
-        <td><a href="https://unis.item.com/wms/outbound/order/edit/DN-5197127" target="_blank">DN-5197127</a></td>
-        <td>Cin7_Omni</td>
-        <td>Ankit Etha</td>
-        <td>Refill Can Drizzle</td>
-        <td>C1-DRZ-500</td>
-        <td>1</td>
+        <td>PRE-RUN14</td><td>~18:22</td>
+        <td>7</td>
+        <td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5073363" target="_blank">PLAN-5073363</a></td>
+        <td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5297020" target="_blank">TASK-5297020</a></td>
+        <td><span class="badge-ok">RELEASED</span></td>
       </tr>
     </table>
+    <p style="margin-top:12px;font-size:13px;color:#7a8ea8">Total: <strong>11 orders</strong> dispatched across 3 plans, all assigned to <strong>4419 / MARTHA OLVERA</strong>. Setting 1246 "Graza DS Batch" — BATCH_ORDER_PICK, PIECE_PICK, skipPackingScanForItem=true, needAutoRelease=true.</p>
   </div>
-
 
 </div>
 
 <!-- TAB: Team 2 Auto Assign -->
 <div id="tab-team2" class="tab-content">
   <div class="stats">
-    <div class="stat"><span class="val">3</span><span class="lbl">Current Orders</span><span class="lbl2">Active in batch</span></div>
-    <div class="stat"><span class="val">PLAN-5073369</span><span class="lbl">Plan</span><span class="lbl2">RELEASED</span></div>
-    <div class="stat"><span class="val">TASK-5297026</span><span class="lbl">Task</span><span class="lbl2">Assigned</span></div>
+    <div class="stat"><span class="val">0</span><span class="lbl">Current Orders</span><span class="lbl2">Pending dispatch</span></div>
+    <div class="stat"><span class="val">11</span><span class="lbl">Total Dispatched</span><span class="lbl2">Across 3 plans</span></div>
+    <div class="stat"><span class="val" style="color:#55d88f">ALL</span><span class="lbl">Dispatch Status</span><span class="lbl2">Caught up</span></div>
     <div class="stat"><span class="val">4419</span><span class="lbl">User ID</span><span class="lbl2">MARTHA OLVERA</span></div>
     <div class="stat"><span class="val" style="color:#55d88f">0</span><span class="lbl">Pending Issues</span><span class="lbl2">All clear</span></div>
   </div>
 
   <div class="card">
-    <h2>Team 2 — Auto Assign Status (RUN15)</h2>
+    <h2>Team 2 — Auto Assign Status (RUN16) — No Work</h2>
     <table>
       <tr><th>Plan</th><th>Task</th><th>Order(s)</th><th>Assignee</th><th>Status</th><th>Rules</th></tr>
       <tr>
@@ -175,23 +127,40 @@ code{background:#13243a;padding:2px 6px;border-radius:4px;font-size:12px}
         </td>
         <td>4419 / MARTHA OLVERA</td>
         <td><span class="badge-ok">RELEASED</span></td>
-        <td><span class="badge-ok">✓ All 8 rules passed</span></td>
+        <td><span class="badge-ok">✓ All passed</span></td>
+      </tr>
+      <tr>
+        <td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5073368" target="_blank">PLAN-5073368</a></td>
+        <td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5297025" target="_blank">TASK-5297025</a></td>
+        <td><a href="https://unis.item.com/wms/outbound/order/edit/DN-5197117" target="_blank">DN-5197117</a></td>
+        <td>4419 / MARTHA OLVERA</td>
+        <td><span class="badge-ok">RELEASED</span></td>
+        <td><span class="badge-ok">✓ All passed</span></td>
+      </tr>
+      <tr>
+        <td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5073363" target="_blank">PLAN-5073363</a></td>
+        <td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5297020" target="_blank">TASK-5297020</a></td>
+        <td>7 orders</td>
+        <td>4419 / MARTHA OLVERA</td>
+        <td><span class="badge-ok">RELEASED</span></td>
+        <td><span class="badge-ok">✓ All passed</span></td>
       </tr>
     </table>
+    <p style="margin-top:12px;font-size:13px;color:#7a8ea8">RUN16 @ 20:31 PDT: 0 new orders found. All 11 Graza DS orders from today's runs dispatched and assigned to Martha Olvera.</p>
   </div>
 
   <div class="card">
     <h2>Rule Compliance Check</h2>
     <table>
       <tr><th>#</th><th>Rule</th><th>Status</th></tr>
-      <tr><td>1</td><td>Full dispatch workflow (pick strategy → task → release)</td><td><span class="badge-ok">PASS</span></td></tr>
-      <tr><td>2</td><td>Assignee = 4419 MARTHA OLVERA (not username text)</td><td><span class="badge-ok">PASS</span></td></tr>
-      <tr><td>3</td><td>Plan not left in BUILDING/PLANNING/PICK_SUGGESTED</td><td><span class="badge-ok">PASS</span></td></tr>
-      <tr><td>4</td><td>No false exceptions on available inventory</td><td><span class="badge-ok">PASS</span></td></tr>
-      <tr><td>5</td><td>Label notes separated into own batch</td><td><span class="badge-ok">N/A</span></td></tr>
-      <tr><td>6</td><td>Wave: identical item+quantity grouped, 1 label/recipient</td><td><span class="badge-ok">N/A</span></td></tr>
-      <tr><td>7</td><td>Batch: ≤22 orders, non-wave, non-label-note, oldest first</td><td><span class="badge-ok">PASS</span></td></tr>
-      <tr><td>8</td><td>Skip packing scan for item ON (wave)</td><td><span class="badge-ok">N/A</span></td></tr>
+      <tr><td>1</td><td>Full dispatch workflow (pick strategy → task → release)</td><td><span class="badge-ok">PASS — All prior runs used full workflow</span></td></tr>
+      <tr><td>2</td><td>Assignee = 4419 MARTHA OLVERA (not username text)</td><td><span class="badge-ok">PASS — All plans assigned to userId 4419</span></td></tr>
+      <tr><td>3</td><td>Plan not left in BUILDING/PLANNING/PICK_SUGGESTED</td><td><span class="badge-ok">PASS — All plans RELEASED</span></td></tr>
+      <tr><td>4</td><td>No false exceptions on available inventory</td><td><span class="badge-ok">PASS — Zero exceptions</span></td></tr>
+      <tr><td>5</td><td>Label notes separated into own batch</td><td><span class="badge-ok">N/A — No label notes in any run</span></td></tr>
+      <tr><td>6</td><td>Wave: identical item+quantity grouped, 1 label/recipient</td><td><span class="badge-ok">N/A — No wave groups formed</span></td></tr>
+      <tr><td>7</td><td>Batch: ≤22 orders, non-wave, non-label-note, oldest first</td><td><span class="badge-ok">PASS — All batches compliant</span></td></tr>
+      <tr><td>8</td><td>Skip packing scan for item ON (wave)</td><td><span class="badge-ok">PASS — skipPackingScanForItem=true on all</span></td></tr>
     </table>
   </div>
 </div>
@@ -232,7 +201,8 @@ Active task: 4ohR10kY6NbMAlFd1_D1l (every 15 min)</pre>
   <div class="card">
     <h2>All Confirmation Reports</h2>
     <ul style="line-height:2">
-      <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-21_RUN15.md">2026-06-21 RUN15 — Current Run</a> <span class="badge-ok">NEW</span></li>
+      <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-21_RUN16.md">2026-06-21 RUN16 — Current Run (No Work)</a> <span class="badge-ok">NEW</span></li>
+      <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-21_RUN15.md">2026-06-21 RUN15</a></li>
       <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-21_RUN14.md">2026-06-21 RUN14</a></li>
       <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-21_RUN4.md">2026-06-21 RUN4</a></li>
       <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-21_RUN3.md">2026-06-21 RUN3</a></li>
@@ -264,7 +234,7 @@ Active task: 4ohR10kY6NbMAlFd1_D1l (every 15 min)</pre>
   </div>
 </div>
 
-<div class="footer">Graza Batch Wave Tickets · RubenVJauregui/Batch-wave-tickets- · Last run: 2026-06-21 20:08 PDT (RUN15)</div>
+<div class="footer">Graza Batch Wave Tickets · RubenVJauregui/Batch-wave-tickets- · Last run: 2026-06-21 20:31 PDT (RUN16) — No pending orders</div>
 </div>
 
 <script>
