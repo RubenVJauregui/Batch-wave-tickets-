@@ -7,13 +7,13 @@
   "port": 3000,
   "buildPack": "dockerfile",
   "databaseStatus": "none",
-  "lastAttempt": "2026-06-22T06:05:00Z",
+  "lastAttempt": "2026-06-22T12:20:00Z",
   "status": "pending-coolify-create",
-  "latestRun": "RUN21",
-  "latestPlan": "PLAN-5073373",
-  "latestTask": "TASK-5297030",
-  "totalDispatchedToday": 1,
-  "totalActivePlans": 17,
-  "totalActiveTasks": 17,
-  "verificationResult": "DISPATCH — 1 new Graza DS order found: DN-5197179 (Katie Gallagher). Dispatched via Setting 1246 Graza DS Batch. PLAN-5073373 RELEASED, TASK-5297030 NEW, assigned to 4419/Martha Olvera, skipPackingScanForItem=true, 0 exceptions. All 18.xlsx rules compliant. Total active plans: 17 (15 batch + 2 wave)."
+  "latestRun": "RUN22",
+  "latestPlan": "PLAN-5073389",
+  "latestTask": "TASK-5297070",
+  "totalDispatchedToday": 0,
+  "totalActivePlans": 8,
+  "totalActiveTasks": 8,
+  "verificationResult": "VERIFICATION — 0 new Graza DS orders found (IMPORTED: 0, OPEN: 0, COMMITTED: 0). 8 active plans (7 batch + 1 wave), all RELEASED, all assigned to 4419/Martha Olvera, skipPackingScanForItem=true, 0 exceptions. 9 plans completed since RUN21. 3 label-note orders flagged for manual verification. 18.xlsx CLEAN."
 }
