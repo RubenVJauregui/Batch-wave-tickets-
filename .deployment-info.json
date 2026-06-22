@@ -1,16 +1,16 @@
 {
   "repoName": "batch-wave-tickets-a6cbec",
   "appName": "batch-wave-tickets-a6cbec",
-  "repoUrl": "https://github.com/atlas-workspace/batch-wave-tickets-a6cbec.git",
+  "repoUrl": "https://github.com/atlas-workspace/batch-wave-tickets-f5fb6e.git",
   "originalRepoUrl": "https://github.com/RubenVJauregui/Batch-wave-tickets-.git",
   "port": 3000,
   "buildPack": "dockerfile",
   "databaseStatus": "none",
-  "lastAttempt": "2026-06-22T03:33:00Z",
+  "lastAttempt": "2026-06-22T03:49:00Z",
   "status": "pending-coolify-retry",
-  "note": "RUN16 deployed — 0 new orders, all prior runs dispatched. Pending Coolify redeploy.",
-  "latestRun": "RUN16",
-  "latestPlan": "PLAN-5073369",
-  "latestTask": "TASK-5297026",
-  "totalDispatchedToday": 11
+  "note": "RUN17 deployed — 2 orders (DN-5197136/37) → PLAN-5073370 / TASK-5297027 → RELEASED, 4419/Martha Olvera. 13 total across 4 plans today.",
+  "latestRun": "RUN17",
+  "latestPlan": "PLAN-5073370",
+  "latestTask": "TASK-5297027",
+  "totalDispatchedToday": 13
 }
