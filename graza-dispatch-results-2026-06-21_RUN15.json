@@ -1,0 +1,88 @@
+{
+  "run": "RUN15",
+  "timestamp": "2026-06-22T03:08:33Z",
+  "timestampPDT": "2026-06-21 ~20:08 PDT",
+  "facility": "Valley View (LT_F1)",
+  "customer": "DRUPLEY INC / DBA GRAZA",
+  "customerId": "ORG-747717",
+  "channel": "Cin7_Omni",
+  "filters": {
+    "status": ["IMPORT", "OPEN", "COMMITTED"],
+    "orderType": "DS"
+  },
+  "summary": {
+    "ordersFound": 3,
+    "waves": 0,
+    "labelNotes": 0,
+    "batches": 1,
+    "exceptions": 0,
+    "failedCommitments": 0
+  },
+  "dispatch": {
+    "setting": "1246 Graza DS Batch",
+    "planId": "PLAN-5073369",
+    "planStatus": "RELEASED",
+    "taskId": "TASK-5297026",
+    "taskStatus": "NEW",
+    "assignee": {
+      "userId": 4419,
+      "name": "MARTHA OLVERA"
+    },
+    "pickMethod": "BATCH_ORDER_PICK",
+    "skipPackingScanForItem": true,
+    "needAutoRelease": true
+  },
+  "orders": [
+    {
+      "orderId": "DN-5197129",
+      "recipient": "Ashley Vanderbosch",
+      "previousStatus": "COMMITTED",
+      "currentStatus": "PLANNED",
+      "planId": "PLAN-5073369",
+      "items": [
+        {"sku": "D1-SZL750", "qty": 1},
+        {"sku": "D1-FZL750", "qty": 1},
+        {"sku": "S1-FZL142", "qty": 1},
+        {"sku": "D1-DRZ500", "qty": 1}
+      ],
+      "labelNote": null,
+      "waveGroup": null
+    },
+    {
+      "orderId": "DN-5197128",
+      "recipient": "Michael Finger",
+      "previousStatus": "COMMITTED",
+      "currentStatus": "PLANNED",
+      "planId": "PLAN-5073369",
+      "items": [
+        {"sku": "D1-SZL750", "qty": 2},
+        {"sku": "GL1-DRZ500", "qty": 1}
+      ],
+      "labelNote": null,
+      "waveGroup": null
+    },
+    {
+      "orderId": "DN-5197127",
+      "recipient": "Ankit Etha",
+      "previousStatus": "COMMITTED",
+      "currentStatus": "PLANNED",
+      "planId": "PLAN-5073369",
+      "items": [
+        {"sku": "J1-FZL2000", "qty": 1},
+        {"sku": "C1-DRZ-500", "qty": 1}
+      ],
+      "labelNote": null,
+      "waveGroup": null
+    }
+  ],
+  "ruleCompliance": {
+    "rule1_fullDispatchWorkflow": "PASS",
+    "rule2_assigneeUserId4419": "PASS",
+    "rule3_planNotStuck": "PASS",
+    "rule4_noFalseExceptions": "PASS",
+    "rule5_labelNoteBatch": "N/A",
+    "rule6_waveGrouping": "N/A",
+    "rule7_batchLimit22": "PASS",
+    "rule8_skipPackingScan": "PASS"
+  }
+}
