@@ -7,13 +7,13 @@
   "port": 3000,
   "buildPack": "dockerfile",
   "databaseStatus": "none",
-  "lastAttempt": "2026-06-22T04:37:00Z",
+  "lastAttempt": "2026-06-22T05:07:00Z",
   "status": "pending-coolify-create",
-  "latestRun": "RUN19",
-  "latestPlan": "PLAN-5073371",
-  "latestTask": "TASK-5297028",
-  "totalDispatchedToday": 2,
+  "latestRun": "RUN20",
+  "latestPlan": "NONE",
+  "latestTask": "NONE",
+  "totalDispatchedToday": 0,
   "totalActivePlans": 16,
   "totalActiveTasks": 16,
-  "verificationResult": "CLEAN — 2 new orders dispatched. 16 active plans (14 batch + 2 wave), all RELEASED, 4419/Martha Olvera, skipPackingScanForItem=true, 0 exceptions, 0 label-note orders"
+  "verificationResult": "NO WORK — 0 new Graza DS orders found (IMPORTED:0, OPEN:0, COMMITTED:0). All 684 Graza DS orders already PLANNED. 16 active plans verified RELEASED, 4419/Martha Olvera, skipPackingScanForItem=true, 0 exceptions."
 }
