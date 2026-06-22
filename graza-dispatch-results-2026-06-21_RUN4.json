@@ -1,0 +1,54 @@
+# Graza Dropship Dispatch Results — 2026-06-21
+
+## Run Summary
+- **Time**: 2026-06-21 17:38 PT (2026-06-22 00:38 UTC)
+- **Dispatched by**: rjauregui (via API)
+- **Total Graza DS Orders**: 45,791
+- **COMMITTED (needing dispatch)**: 1
+- **IMPORTED/OPEN**: 0
+- **Already PLANNED/PLANNING**: 45,790
+
+## Orders Processed
+
+### Single Order — DN-5197054
+| Field | Value |
+|---|---|
+| **Order ID** | [DN-5197054](https://unis.item.com/wms/order/order/edit/DN-5197054) |
+| **Customer** | Susan Haven, Bryan TX |
+| **Items** | D1-SZL750 (Sizzle) x1, D1-DRZ500 (Drizzle) x1 |
+| **Item IDs** | ITEM-2352257, ITEM-2352258 |
+| **Original Status** | COMMITTED |
+| **New Status** | PLANNED |
+| **Label Note** | None |
+| **Classification** | Batch (unique item combo) |
+
+## Plan & Task Results
+
+| Field | Value |
+|---|---|
+| **Plan ID** | [PLAN-5073362](https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5073362) |
+| **Plan Status** | **RELEASED** ✅ |
+| **Pick Method** | BATCH_ORDER_PICK |
+| **Task ID** | [TASK-5297019](https://unis.item.com/wms/task/general-task/edit/TASK-5297019) |
+| **Assignee** | **4419 — MARTHA OLVERA** ✅ |
+| **Skip Packing Scan** | **true** ✅ |
+| **Task Tags** | Graza DS Batch |
+| **Dispatch Setting** | 1273 (Graza DS Batch) |
+| **Release Date** | 2026-06-22T00:38:43 |
+
+## Settings Used
+- **Setting 1273** (Graza DS Batch): BATCH_ORDER_PICK, PIECE_PICK, min=1, max=22, assignee=4419, skipPackingScanForItem=true, needAutoRelease=true
+- **Setting 1282** (Graza DS Wave): WAVE_PICK_BY_ITEM, PIECE_PICK, min=1, max=22, assignee=4419, skipPackingScanForItem=true, needAutoRelease=true
+
+## Exceptions
+None. The order dispatched successfully with zero exceptions.
+
+## Wave/Batch Grouping
+- DN-5197054 has items [D1-SZL750, D1-DRZ500] — does not match any existing wave group from prior analysis
+- No label notes → standard batch
+- Only 1 order needing processing today → placed in single-order batch
+
+## Notes
+- Settings 1273 and 1282 were pre-configured by rjauregui on 2026-06-20
+- All 45,790 existing Graza DS orders were already processed in prior dispatch runs
+- No Martha Olvera 18.xlsx was found in workspace or memory

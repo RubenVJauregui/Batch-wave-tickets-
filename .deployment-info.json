@@ -1,0 +1,12 @@
+{
+  "repoName": "batch-wave-tickets-f5fb6e",
+  "appName": "batch-wave-tickets-f5fb6e",
+  "repoUrl": "https://github.com/atlas-workspace/batch-wave-tickets-f5fb6e.git",
+  "originalRepoUrl": "https://github.com/RubenVJauregui/Batch-wave-tickets-.git",
+  "port": 3000,
+  "buildPack": "dockerfile",
+  "databaseStatus": "none",
+  "lastAttempt": "2026-06-22T00:48:00Z",
+  "status": "pending-coolify-create",
+  "note": "Coolify returned 504 Gateway Timeout on create. Repo pushed to both origins. Retry createCoolifyAppTool later."
+}
