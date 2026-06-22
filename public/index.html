@@ -51,31 +51,46 @@ code{background:#13243a;padding:2px 6px;border-radius:4px;font-size:12px}
 <!-- TAB: Latest Run -->
 <div id="tab-run" class="tab-content active">
   <div class="stats">
-    <div class="stat"><span class="val">0</span><span class="lbl">Orders Found</span><span class="lbl2">DS dropship</span></div>
-    <div class="stat"><span class="val">0</span><span class="lbl">Batches Created</span><span class="lbl2">No pending orders</span></div>
-    <div class="stat"><span class="val">0</span><span class="lbl">Wave Groups</span><span class="lbl2">No pending orders</span></div>
-    <div class="stat"><span class="val">0</span><span class="lbl">Label Notes</span><span class="lbl2">No pending orders</span></div>
-    <div class="stat"><span class="val" style="color:#55d88f">✓</span><span class="lbl">Status</span><span class="lbl2">ALL CLEAR</span></div>
+    <div class="stat"><span class="val">2</span><span class="lbl">Orders Found</span><span class="lbl2">DS dropship</span></div>
+    <div class="stat"><span class="val">1</span><span class="lbl">Batches Created</span><span class="lbl2">BATCH_ORDER_PICK</span></div>
+    <div class="stat"><span class="val">0</span><span class="lbl">Wave Groups</span><span class="lbl2">Item+qtys differ</span></div>
+    <div class="stat"><span class="val">0</span><span class="lbl">Label Notes</span><span class="lbl2">None</span></div>
+    <div class="stat"><span class="val" style="color:#55d88f">✓</span><span class="lbl">Status</span><span class="lbl2">RELEASED</span></div>
     <div class="stat"><span class="val" style="color:#55d88f">4419</span><span class="lbl">Assignee</span><span class="lbl2">MARTHA OLVERA</span></div>
   </div>
 
   <div class="card">
-    <h2>Dispatch Results — 2026-06-21 20:31 PDT (RUN16)</h2>
+    <h2>Dispatch Results — 2026-06-21 20:47 PDT (RUN17) <span class="badge-ok" style="margin-left:10px">ACTIVE</span></h2>
     <table>
       <tr><th>Field</th><th>Value</th></tr>
-      <tr><td>Orders Found</td><td><span class="badge-ok">0 — All caught up</span></td></tr>
-      <tr><td>New Plans</td><td>0</td></tr>
-      <tr><td>New Tasks</td><td>0</td></tr>
-      <tr><td>Status</td><td><span class="badge-ok">NO WORK — Everything dispatched</span></td></tr>
-      <tr><td>Errors</td><td>0</td></tr>
-      <tr><td>Exceptions</td><td>0</td></tr>
+      <tr><td>Orders Found</td><td><span class="badge-ok">2 — DN-5197136, DN-5197137</span></td></tr>
+      <tr><td>Plan</td><td><a href="https://unis.item.com/wms/plan/order-plan/edit/PLAN-5073370" target="_blank">PLAN-5073370</a></td></tr>
+      <tr><td>Task</td><td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5297027" target="_blank">TASK-5297027</a></td></tr>
+      <tr><td>Status</td><td><span class="badge-ok">RELEASED</span></td></tr>
+      <tr><td>Errors / Exceptions</td><td>0 / 0</td></tr>
+      <tr><td>Setting</td><td>#1246 "Graza DS Batch" — BATCH_ORDER_PICK, PIECE_PICK</td></tr>
+      <tr><td>skipPackingScanForItem</td><td><span class="badge-ok">true ✅</span></td></tr>
     </table>
   </div>
 
   <div class="card">
-    <h2>Prior Active Dispatch Reference</h2>
+    <h2>All Active Dispatch History (Today)</h2>
     <table>
       <tr><th>Run</th><th>Time (PDT)</th><th>Orders</th><th>Plan</th><th>Task</th><th>Status</th></tr>
+      <tr style="background:#0d2a1a">
+        <td><strong>RUN17</strong> <span class="badge-ok">NOW</span></td><td>~20:47</td>
+        <td>2 (DN-5197136/37)</td>
+        <td><a href="https://unis.item.com/wms/plan/order-plan/edit/PLAN-5073370" target="_blank">PLAN-5073370</a></td>
+        <td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5297027" target="_blank">TASK-5297027</a></td>
+        <td><span class="badge-ok">RELEASED</span></td>
+      </tr>
+      <tr>
+        <td>RUN16</td><td>~20:31</td>
+        <td>0</td>
+        <td>—</td>
+        <td>—</td>
+        <td>No work</td>
+      </tr>
       <tr>
         <td>RUN15</td><td>~20:08</td>
         <td>3 (DN-5197127/28/29)</td>
@@ -98,7 +113,7 @@ code{background:#13243a;padding:2px 6px;border-radius:4px;font-size:12px}
         <td><span class="badge-ok">RELEASED</span></td>
       </tr>
     </table>
-    <p style="margin-top:12px;font-size:13px;color:#7a8ea8">Total: <strong>11 orders</strong> dispatched across 3 plans, all assigned to <strong>4419 / MARTHA OLVERA</strong>. Setting 1246 "Graza DS Batch" — BATCH_ORDER_PICK, PIECE_PICK, skipPackingScanForItem=true, needAutoRelease=true.</p>
+    <p style="margin-top:12px;font-size:13px;color:#7a8ea8">Total: <strong>13 orders</strong> dispatched across <strong>4 plans / 4 tasks</strong>, all assigned to <strong>4419 / MARTHA OLVERA</strong>. Setting 1246 "Graza DS Batch" — BATCH_ORDER_PICK, PIECE_PICK, skipPackingScanForItem=true, needAutoRelease=true.</p>
   </div>
 
 </div>
@@ -106,17 +121,28 @@ code{background:#13243a;padding:2px 6px;border-radius:4px;font-size:12px}
 <!-- TAB: Team 2 Auto Assign -->
 <div id="tab-team2" class="tab-content">
   <div class="stats">
-    <div class="stat"><span class="val">0</span><span class="lbl">Current Orders</span><span class="lbl2">Pending dispatch</span></div>
-    <div class="stat"><span class="val">11</span><span class="lbl">Total Dispatched</span><span class="lbl2">Across 3 plans</span></div>
-    <div class="stat"><span class="val" style="color:#55d88f">ALL</span><span class="lbl">Dispatch Status</span><span class="lbl2">Caught up</span></div>
+    <div class="stat"><span class="val">2</span><span class="lbl">Current Orders</span><span class="lbl2">RUN17 dispatched</span></div>
+    <div class="stat"><span class="val">13</span><span class="lbl">Total Dispatched</span><span class="lbl2">Across 4 plans</span></div>
+    <div class="stat"><span class="val" style="color:#55d88f">ALL</span><span class="lbl">Dispatch Status</span><span class="lbl2">RELEASED</span></div>
     <div class="stat"><span class="val">4419</span><span class="lbl">User ID</span><span class="lbl2">MARTHA OLVERA</span></div>
     <div class="stat"><span class="val" style="color:#55d88f">0</span><span class="lbl">Pending Issues</span><span class="lbl2">All clear</span></div>
   </div>
 
   <div class="card">
-    <h2>Team 2 — Auto Assign Status (RUN16) — No Work</h2>
+    <h2>Team 2 — Auto Assign Status (RUN17) — 2 Orders Dispatched <span class="badge-ok">ACTIVE</span></h2>
     <table>
       <tr><th>Plan</th><th>Task</th><th>Order(s)</th><th>Assignee</th><th>Status</th><th>Rules</th></tr>
+      <tr style="background:#0d2a1a">
+        <td><a href="https://unis.item.com/wms/plan/order-plan/edit/PLAN-5073370" target="_blank">PLAN-5073370</a></td>
+        <td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5297027" target="_blank">TASK-5297027</a></td>
+        <td>
+          <a href="https://unis.item.com/wms/outbound/order/edit/DN-5197136" target="_blank">DN-5197136</a>,
+          <a href="https://unis.item.com/wms/outbound/order/edit/DN-5197137" target="_blank">DN-5197137</a>
+        </td>
+        <td>4419 / MARTHA OLVERA</td>
+        <td><span class="badge-ok">RELEASED</span></td>
+        <td><span class="badge-ok">✓ All passed</span></td>
+      </tr>
       <tr>
         <td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5073369" target="_blank">PLAN-5073369</a></td>
         <td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5297026" target="_blank">TASK-5297026</a></td>
@@ -146,7 +172,7 @@ code{background:#13243a;padding:2px 6px;border-radius:4px;font-size:12px}
         <td><span class="badge-ok">✓ All passed</span></td>
       </tr>
     </table>
-    <p style="margin-top:12px;font-size:13px;color:#7a8ea8">RUN16 @ 20:31 PDT: 0 new orders found. All 11 Graza DS orders from today's runs dispatched and assigned to Martha Olvera.</p>
+    <p style="margin-top:12px;font-size:13px;color:#7a8ea8">RUN17 @ 20:47 PDT: 2 orders (DN-5197136, DN-5197137) → PLAN-5073370 / TASK-5297027 → RELEASED. All 13 Graza DS orders from today dispatched across 4 plans, all assigned to Martha Olvera (4419).</p>
   </div>
 
   <div class="card">
@@ -201,7 +227,8 @@ Active task: 4ohR10kY6NbMAlFd1_D1l (every 15 min)</pre>
   <div class="card">
     <h2>All Confirmation Reports</h2>
     <ul style="line-height:2">
-      <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-21_RUN16.md">2026-06-21 RUN16 — Current Run (No Work)</a> <span class="badge-ok">NEW</span></li>
+      <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-21_RUN17.md">2026-06-21 RUN17 — Current Run (2 orders, RELEASED)</a> <span class="badge-ok">NOW</span></li>
+      <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-21_RUN16.md">2026-06-21 RUN16 — No Work</a></li>
       <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-21_RUN15.md">2026-06-21 RUN15</a></li>
       <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-21_RUN14.md">2026-06-21 RUN14</a></li>
       <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-21_RUN4.md">2026-06-21 RUN4</a></li>
@@ -234,7 +261,7 @@ Active task: 4ohR10kY6NbMAlFd1_D1l (every 15 min)</pre>
   </div>
 </div>
 
-<div class="footer">Graza Batch Wave Tickets · RubenVJauregui/Batch-wave-tickets- · Last run: 2026-06-21 20:31 PDT (RUN16) — No pending orders</div>
+<div class="footer">Graza Batch Wave Tickets · RubenVJauregui/Batch-wave-tickets- · Last run: 2026-06-21 20:47 PDT (RUN17) — 2 orders, 1 batch, RELEASED</div>
 </div>
 
 <script>
