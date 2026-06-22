@@ -1,0 +1,89 @@
+{
+  "run": "RUN14",
+  "timestamp": "2026-06-21T19:52:00-07:00",
+  "timestamp_utc": "2026-06-22T02:52:00Z",
+  "facility": "Valley View (LT_F1)",
+  "customer": "DRUPLEY INC / DBA GRAZA",
+  "customerId": "ORG-747717",
+  "channel": "Cin7_Omni",
+  "filters": {
+    "statuses": ["OPEN", "COMMITTED"],
+    "orderType": "DS"
+  },
+  "assignee": {
+    "userId": 4419,
+    "name": "MARTHA OLVERA"
+  },
+  "summary": {
+    "ordersFound": 1,
+    "ordersDispatched": 1,
+    "exceptionOrders": 0,
+    "failedCommitments": 0,
+    "waveGroups": 0,
+    "labelNoteOrders": 0,
+    "batchOrders": 1
+  },
+  "dispatchSetting": {
+    "id": 1246,
+    "name": "Graza DS Batch",
+    "pickMethod": "BATCH_ORDER_PICK",
+    "pickType": "PIECE_PICK",
+    "skipPackingScanForItem": true,
+    "needAutoRelease": true,
+    "maxOrderQtyPerPlan": 22,
+    "minOrderQtyPerPlan": 1
+  },
+  "orders": [
+    {
+      "orderId": "DN-5197117",
+      "omsId": "SO02194203-1",
+      "recipient": "Kaitlyn Frieling, Brooklyn NY",
+      "status": "PLANNED",
+      "originalStatus": "COMMITTED",
+      "labelNote": null,
+      "classification": "batch",
+      "orderPlanReleaseDate": "2026-06-22T02:52:45",
+      "items": [
+        {"itemId": "ITEM-2352262", "sku": "C1-DRZ-500", "description": "Drizzle Refill Can", "qty": 1},
+        {"itemId": "ITEM-2352263", "sku": "C1-SZL-750", "description": "Sizzle Refill Can", "qty": 1},
+        {"itemId": "ITEM-2352266", "sku": "S1-FZL142", "description": "Frizzle Spray - 1 Can", "qty": 1},
+        {"itemId": "ITEM-2352267", "sku": "S1-SZL142", "description": "Sizzle Spray - 1 Can", "qty": 1}
+      ]
+    }
+  ],
+  "plans": [
+    {
+      "planId": "PLAN-5073368",
+      "status": "RELEASED",
+      "pickMethod": "BATCH_ORDER_PICK",
+      "pickType": "PIECE_PICK",
+      "orderIds": ["DN-5197117"],
+      "taskIds": ["TASK-5297025"],
+      "assigneeUserId": "4419",
+      "skipPackingScanForItem": true,
+      "createdTime": "2026-06-22T02:52:45"
+    }
+  ],
+  "tasks": [
+    {
+      "taskId": "TASK-5297025",
+      "status": "NEW",
+      "assigneeUserId": "4419",
+      "pickMethod": "BATCH_ORDER_PICK",
+      "tags": ["Graza DS Batch"],
+      "skipPackingScanForItem": true,
+      "orderIds": ["DN-5197117"],
+      "orderPlanId": "PLAN-5073368"
+    }
+  ],
+  "ruleCompliance": {
+    "rule1_fullDispatchWorkflow": true,
+    "rule2_numericUserId": true,
+    "rule3_notStuckInPlanning": true,
+    "rule4_noFalseExceptions": true,
+    "rule5_labelNotesSeparated": "N/A",
+    "rule6_waveGroups": "N/A",
+    "rule7_batchLimits": true,
+    "rule8_skipPackingScan": true
+  }
+}
