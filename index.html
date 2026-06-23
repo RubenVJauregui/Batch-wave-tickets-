@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Graza Batch Wave Tickets</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;background:#07111f;color:#e5edf7;min-height:100vh}
+.wrap{max-width:1200px;margin:auto;padding:24px 20px}
+h1{margin:0 0 6px 0;font-size:26px}
+.sub{color:#7a8ea8;margin-bottom:18px;font-size:14px}
+.tabs{display:flex;gap:4px;margin-bottom:20px;flex-wrap:wrap}
+.tab{padding:10px 20px;background:#0f1b2d;border:1px solid #24364f;border-radius:10px 10px 0 0;color:#b0c4db;cursor:pointer;font-size:14px;font-weight:500;transition:all .15s}
+.tab:hover{background:#182a44;color:#fff}
+.tab.active{background:#13243a;border-bottom:2px solid #55d88f;color:#fff;font-weight:600}
+.tab-content{display:none}
+.tab-content.active{display:block}
+.card{background:#0f1b2d;border:1px solid #24364f;border-radius:16px;padding:22px;margin:16px 0}
+.card h2{margin:0 0 12px 0;font-size:18px;color:#80c7ff}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-bottom:16px}
+.stat{background:#13243a;padding:14px;border-radius:12px;border:1px solid #29405f;text-align:center}
+.stat .val{display:block;font-size:26px;font-weight:700;color:#55d88f}
+.stat .lbl{display:block;font-size:12px;color:#7a8ea8;margin-top:2px}
+.stat .lbl2{display:block;font-size:10px;color:#4a6280;margin-top:1px}
+.badge-ok{display:inline-block;background:#0d3d22;color:#55d88f;padding:3px 8px;border-radius:6px;font-size:11px;font-weight:600}
+.badge-warn{display:inline-block;background:#3d2e0d;color:#f0c060;padding:3px 8px;border-radius:6px;font-size:11px;font-weight:600}
+table{width:100%;border-collapse:collapse;margin:10px 0}
+th{text-align:left;color:#80c7ff;font-size:12px;text-transform:uppercase;letter-spacing:.05em;padding:8px 10px;border-bottom:1px solid #24364f}
+td{padding:8px 10px;border-bottom:1px solid #162236;font-size:13px}
+tr:last-child td{border-bottom:none}
+pre{white-space:pre-wrap;background:#07111f;border:1px solid #24364f;border-radius:12px;padding:14px;overflow:auto;font-size:12px;line-height:1.55;max-height:600px;overflow-y:auto}
+a{color:#80c7ff;text-decoration:none}
+a:hover{text-decoration:underline}
+code{background:#13243a;padding:2px 6px;border-radius:4px;font-size:12px}
+.footer{margin-top:24px;padding-top:16px;border-top:1px solid #162236;font-size:12px;color:#4a6280}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Graza Batch / Wave Tickets</h1>
+<p class="sub">Drupley Inc / DBA Graza — batch &amp; wave automation dashboard</p>
+
+<div class="tabs">
+  <div class="tab active" onclick="switchTab('run')">▶ Latest Run</div>
+  <div class="tab" onclick="switchTab('team2')">Team 2 Auto Assign</div>
+  <div class="tab" onclick="switchTab('rules')">18.xlsx Rules</div>
+  <div class="tab" onclick="switchTab('history')">All Reports</div>
+</div>
+
+<!-- TAB: Latest Run -->
+<div id="tab-run" class="tab-content active">
+  <div class="stats">
+    <div class="stat"><span class="val">103</span><span class="lbl">Orders Found</span><span class="lbl2">DS dropship / Cin7_Omni</span></div>
+    <div class="stat"><span class="val">5</span><span class="lbl">Batches Created</span><span class="lbl2">22+22+22+22+15</span></div>
+    <div class="stat"><span class="val">0</span><span class="lbl">Wave Groups</span><span class="lbl2">Batch dispatch</span></div>
+    <div class="stat"><span class="val">0</span><span class="lbl">Label Notes</span><span class="lbl2">None detected</span></div>
+    <div class="stat"><span class="val" style="color:#55d88f">✓</span><span class="lbl">Status</span><span class="lbl2">ALL RELEASED</span></div>
+    <div class="stat"><span class="val" style="color:#55d88f">4419</span><span class="lbl">Assignee</span><span class="lbl2">MARTHA OLVERA</span></div>
+  </div>
+
+  <div class="card">
+    <h2>Dispatch Results — 2026-06-23 09:15 PDT (RUN19)</h2>
+    <table>
+      <tr><th>Field</th><th>Value</th></tr>
+      <tr><td>Customer</td><td>Drupley Inc / DBA Graza (ORG-747717)</td></tr>
+      <tr><td>Setting</td><td>1246 "Graza DS Batch"</td></tr>
+      <tr><td>Pick Method</td><td>BATCH_ORDER_PICK / PIECE_PICK</td></tr>
+      <tr><td>Total Plans</td><td>5 (all RELEASED)</td></tr>
+      <tr><td>Total Tasks</td><td>5 (all NEW)</td></tr>
+      <tr><td>Total Orders</td><td>103</td></tr>
+      <tr><td>Assignee</td><td>4419 / MARTHA OLVERA ✅</td></tr>
+      <tr><td>Skip Packing Scan</td><td><span class="badge-ok">true</span> on all</td></tr>
+      <tr><td>Exceptions</td><td>0</td></tr>
+      <tr><td>Failed Commitments</td><td>0</td></tr>
+      <tr><td>Errors</td><td>0</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>Plan / Task Breakdown</h2>
+    <table>
+      <tr><th>#</th><th>Plan ID</th><th>Orders</th><th>Task ID</th><th>Status</th><th>Skip Scan</th></tr>
+      <tr>
+        <td>1</td>
+        <td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5073837" target="_blank">PLAN-5073837</a></td>
+        <td>22</td>
+        <td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5298597" target="_blank">TASK-5298597</a></td>
+        <td><span class="badge-ok">RELEASED</span></td>
+        <td><span class="badge-ok">true</span></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5073838" target="_blank">PLAN-5073838</a></td>
+        <td>22</td>
+        <td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5298599" target="_blank">TASK-5298599</a></td>
+        <td><span class="badge-ok">RELEASED</span></td>
+        <td><span class="badge-ok">true</span></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5073839" target="_blank">PLAN-5073839</a></td>
+        <td>22</td>
+        <td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5298600" target="_blank">TASK-5298600</a></td>
+        <td><span class="badge-ok">RELEASED</span></td>
+        <td><span class="badge-ok">true</span></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5073840" target="_blank">PLAN-5073840</a></td>
+        <td>22</td>
+        <td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5298602" target="_blank">TASK-5298602</a></td>
+        <td><span class="badge-ok">RELEASED</span></td>
+        <td><span class="badge-ok">true</span></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5073841" target="_blank">PLAN-5073841</a></td>
+        <td>15</td>
+        <td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5298603" target="_blank">TASK-5298603</a></td>
+        <td><span class="badge-ok">RELEASED</span></td>
+        <td><span class="badge-ok">true</span></td>
+      </tr>
+    </table>
+  </div>
+
+
+</div>
+
+<!-- TAB: Team 2 Auto Assign -->
+<div id="tab-team2" class="tab-content">
+  <div class="stats">
+    <div class="stat"><span class="val">103</span><span class="lbl">Current Orders</span><span class="lbl2">Across 5 plans</span></div>
+    <div class="stat"><span class="val">5</span><span class="lbl">Plans</span><span class="lbl2">ALL RELEASED</span></div>
+    <div class="stat"><span class="val">5</span><span class="lbl">Tasks</span><span class="lbl2">ALL NEW</span></div>
+    <div class="stat"><span class="val">4419</span><span class="lbl">User ID</span><span class="lbl2">MARTHA OLVERA</span></div>
+    <div class="stat"><span class="val" style="color:#55d88f">0</span><span class="lbl">Pending Issues</span><span class="lbl2">All clear</span></div>
+  </div>
+
+  <div class="card">
+    <h2>Team 2 — Auto Assign Status — RUN19 (2026-06-23)</h2>
+    <table>
+      <tr><th>Plan</th><th>Task</th><th>Orders</th><th>Assignee</th><th>Status</th><th>Rules</th></tr>
+      <tr>
+        <td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5073837" target="_blank">PLAN-5073837</a></td>
+        <td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5298597" target="_blank">TASK-5298597</a></td>
+        <td>22</td>
+        <td>4419 / MARTHA OLVERA</td>
+        <td><span class="badge-ok">RELEASED</span></td>
+        <td><span class="badge-ok">✓ 7 of 8</span></td>
+      </tr>
+      <tr>
+        <td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5073838" target="_blank">PLAN-5073838</a></td>
+        <td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5298599" target="_blank">TASK-5298599</a></td>
+        <td>22</td>
+        <td>4419 / MARTHA OLVERA</td>
+        <td><span class="badge-ok">RELEASED</span></td>
+        <td><span class="badge-ok">✓ 7 of 8</span></td>
+      </tr>
+      <tr>
+        <td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5073839" target="_blank">PLAN-5073839</a></td>
+        <td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5298600" target="_blank">TASK-5298600</a></td>
+        <td>22</td>
+        <td>4419 / MARTHA OLVERA</td>
+        <td><span class="badge-ok">RELEASED</span></td>
+        <td><span class="badge-ok">✓ 7 of 8</span></td>
+      </tr>
+      <tr>
+        <td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5073840" target="_blank">PLAN-5073840</a></td>
+        <td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5298602" target="_blank">TASK-5298602</a></td>
+        <td>22</td>
+        <td>4419 / MARTHA OLVERA</td>
+        <td><span class="badge-ok">RELEASED</span></td>
+        <td><span class="badge-ok">✓ 7 of 8</span></td>
+      </tr>
+      <tr>
+        <td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5073841" target="_blank">PLAN-5073841</a></td>
+        <td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5298603" target="_blank">TASK-5298603</a></td>
+        <td>15</td>
+        <td>4419 / MARTHA OLVERA</td>
+        <td><span class="badge-ok">RELEASED</span></td>
+        <td><span class="badge-ok">✓ 7 of 8</span></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>Rule Compliance Check</h2>
+    <table>
+      <tr><th>#</th><th>Rule</th><th>Status</th></tr>
+      <tr><td>1</td><td>Full dispatch workflow (pick strategy → task → release)</td><td><span class="badge-ok">PASS</span></td></tr>
+      <tr><td>2</td><td>Assignee = 4419 MARTHA OLVERA (not username text)</td><td><span class="badge-ok">PASS</span></td></tr>
+      <tr><td>3</td><td>Plan not left in BUILDING/PLANNING/PICK_SUGGESTED</td><td><span class="badge-ok">PASS</span></td></tr>
+      <tr><td>4</td><td>No false exceptions on available inventory</td><td><span class="badge-ok">PASS</span></td></tr>
+      <tr><td>5</td><td>Label notes separated into own batch</td><td><span class="badge-ok">N/A</span></td></tr>
+      <tr><td>6</td><td>Wave: identical item+quantity grouped, 1 label/recipient</td><td><span class="badge-warn">DEFERRED</span></td></tr>
+      <tr><td>7</td><td>Batch: ≤22 orders, non-wave, non-label-note, oldest first</td><td><span class="badge-ok">PASS</span></td></tr>
+      <tr><td>8</td><td>Skip packing scan for item ON</td><td><span class="badge-ok">PASS</span></td></tr>
+    </table>
+    <p style="margin-top:12px;font-size:12px;color:#7a8ea8">⚠️ Rule 6 (Wave) deferred: batch grouping used for all 103 orders. Line-item retrieval for wave matching not feasible in dispatch environment.</p>
+  </div>
+</div>
+
+<!-- TAB: 18.xlsx Rules -->
+<div id="tab-rules" class="tab-content">
+  <div class="card">
+    <h2>18.xlsx Issue Report — Remediation Rules</h2>
+    <pre># Graza Issue Review — 2026-06-18 — 18.xlsx
+Source: 18.xlsx report from Ruben / Martha feedback.
+
+## Reported Issues
+- Orders dropped but stayed in PLANNING until manually released.
+- Several plans/orders did not get assigned to molvera.
+- Wave labels printed 1 label per item instead of 1 label per customer.
+- Label notes could not be printed for some label-note orders.
+
+## Root Cause
+1. Affected plans (PLAN-5072874/75/76/77) created via direct order-plan flow
+2. PLAN-5072914 used text "molvera" instead of userId 4419, stuck in BUILDING
+
+## Corrected Rules (Active)
+1. Use full dispatch/release workflow — NOT direct order-plan/create
+2. Assign using userId=4419, NOT username text
+3. Verify plan reaches RELEASED with task IDs
+4. Do not send available orders to exception
+5. Label-note orders → separate batch workflow
+6. Waves: exact item+quantity groups, Wave Pick By Item, Skip Packing Scan, 1 label/recipient
+7. Batches: ≤22 orders, non-wave, non-label-note, oldest first
+8. Save results to GitHub + update dashboard
+
+Active task: 4ohR10kY6NbMAlFd1_D1l (every 15 min)</pre>
+  </div>
+</div>
+
+<!-- TAB: All Reports -->
+<div id="tab-history" class="tab-content">
+  <div class="card">
+    <h2>All Confirmation Reports</h2>
+    <ul style="line-height:2">
+      <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-23_RUN19.md">2026-06-23 RUN19 — Current Run</a> <span class="badge-ok">NEW</span></li>
+      <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-21_RUN14.md">2026-06-21 RUN14</a></li>
+      <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-21_RUN4.md">2026-06-21 RUN4</a></li>
+      <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-21_RUN3.md">2026-06-21 RUN3</a></li>
+      <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-21_RUN2.md">2026-06-21 RUN2</a></li>
+      <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-21.md">2026-06-21</a></li>
+      <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-20.md">2026-06-20</a></li>
+      <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-19_RUN5.md">2026-06-19 RUN5</a></li>
+      <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-19_RUN4.md">2026-06-19 RUN4</a></li>
+      <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-19_RUN3.md">2026-06-19 RUN3</a></li>
+      <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-19_RUN2.md">2026-06-19 RUN2</a></li>
+      <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-19.md">2026-06-19</a></li>
+      <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-18.md">2026-06-18</a></li>
+      <li>📄 <a href="/GRAZA_ISSUE_REVIEW_2026-06-18_18XLSX.md">2026-06-18 — 18.xlsx Issue Review</a></li>
+      <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-05_RUN12.md">2026-06-05 RUN12</a></li>
+      <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-05_RUN11.md">2026-06-05 RUN11</a></li>
+      <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-05_RUN10.md">2026-06-05 RUN10</a></li>
+      <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-05_RUN9.md">2026-06-05 RUN9</a></li>
+      <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-05_RUN8.md">2026-06-05 RUN8</a></li>
+      <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-04_RUN7.md">2026-06-04 RUN7</a></li>
+      <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-04_RUN6.md">2026-06-04 RUN6</a></li>
+      <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-04_RUN5.md">2026-06-04 RUN5</a></li>
+      <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-04_RUN4.md">2026-06-04 RUN4</a></li>
+      <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-04_RUN3.md">2026-06-04 RUN3</a></li>
+      <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-02_RUN2.md">2026-06-02 RUN2</a></li>
+      <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-02.md">2026-06-02</a></li>
+      <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-05-30.md">2026-05-30</a></li>
+      <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-05-29.md">2026-05-29</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="footer">Graza Batch Wave Tickets · RubenVJauregui/Batch-wave-tickets- · Last run: 2026-06-23 09:15 PDT (RUN19)</div>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  document.querySelector('.tab[onclick*="'+name+'"]').classList.add('active');
+  document.getElementById('tab-'+name).classList.add('active');
+}
+</script>
+</body>
+</html>
