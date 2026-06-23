@@ -1,0 +1,83 @@
+{
+  "run": "RUN25",
+  "date": "2026-06-23",
+  "time": "05:50 PDT",
+  "facility": "LT_F1",
+  "tenant": "LT",
+  "customer": "Drupley Inc / DBA Graza",
+  "customerId": "ORG-747717",
+  "channel": "Cin7_Omni",
+  "summary": {
+    "newOrdersFound": 5,
+    "dispatched": 4,
+    "labelNoteOrders": 0,
+    "waveGroups": 0,
+    "batchGroups": 1,
+    "plansCreated": 1,
+    "tasksCreated": 1,
+    "exceptions": 1
+  },
+  "waveGroups": [],
+  "batchPlans": [
+    {
+      "planId": "PLAN-5073740",
+      "planStatus": "RELEASED",
+      "taskId": "TASK-5298205",
+      "taskStatus": "RELEASED",
+      "assigneeId": 4419,
+      "assigneeName": "MARTHA OLVERA",
+      "skipPackingScanForItem": true,
+      "autoRelease": true,
+      "dispatchSetting": "1246 Graza DS Batch",
+      "pickMethod": "BATCH_ORDER_PICK",
+      "exceptionOrders": 1,
+      "orders": [
+        {
+          "orderId": "DN-5197922",
+          "recipient": "Stephanie Dunn, ME",
+          "items": "5 items (5 SKUs)",
+          "labelNote": null,
+          "giftMessageByLabel": null
+        },
+        {
+          "orderId": "DN-5197923",
+          "recipient": "Steven Griffin, MD",
+          "items": "Sizzle Refill ×3 + Spray",
+          "labelNote": null,
+          "giftMessageByLabel": null
+        },
+        {
+          "orderId": "DN-5197924",
+          "recipient": "Richard Rose, GA",
+          "items": "6 items (6 SKUs)",
+          "labelNote": null,
+          "giftMessageByLabel": null
+        },
+        {
+          "orderId": "DN-5197925",
+          "recipient": "James Miller, RI",
+          "items": "Drizzle Refill + Sizzle Refill ×2",
+          "labelNote": null,
+          "giftMessageByLabel": null
+        }
+      ],
+      "exceptions": [
+        {
+          "orderId": "DN-5197692",
+          "reason": "Retailer(U.S. Naval Institute) not found, Please check."
+        }
+      ]
+    }
+  ],
+  "compliance18xlsx": {
+    "fullWorkflow": true,
+    "assigneeUserId": 4419,
+    "noStuckPlans": true,
+    "noFalseExceptions": true,
+    "labelNotesSeparated": "N/A",
+    "waveRule": "N/A",
+    "batchRule": true,
+    "skipPackingScan": true,
+    "oneLabelPerRecipient": true
+  }
+}
