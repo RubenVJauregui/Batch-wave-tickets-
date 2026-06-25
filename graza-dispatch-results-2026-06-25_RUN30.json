@@ -1,0 +1,78 @@
+{
+  "run": "RUN30",
+  "date": "2026-06-25",
+  "time": "~21:35 PT",
+  "facility": "LT_F1",
+  "tenant": "LT",
+  "customer": "Drupley Inc / DBA Graza",
+  "customerId": "ORG-747717",
+  "channel": "Cin7_Omni",
+  "summary": {
+    "newOrdersFound": 2,
+    "dispatched": 2,
+    "labelNoteOrders": 0,
+    "waveGroups": 0,
+    "batchGroups": 1,
+    "plansCreated": 2,
+    "tasksCreated": 2,
+    "exceptions": 0
+  },
+  "waveGroups": [],
+  "batchPlans": [
+    {
+      "planId": "PLAN-5074485",
+      "planStatus": "RELEASED",
+      "taskId": "TASK-5300661",
+      "taskStatus": "NEW",
+      "assigneeId": 4419,
+      "assigneeName": "MARTHA OLVERA",
+      "skipPackingScanForItem": true,
+      "autoRelease": true,
+      "dispatchSetting": "1282 Graza DS Wave Auto (BATCH fallback)",
+      "pickMethod": "BATCH_ORDER_PICK",
+      "exceptionOrders": 0,
+      "orders": [
+        {
+          "orderId": "DN-5199249",
+          "recipient": "William Lynch, Somis CA",
+          "items": "Frizzle 750ml ×1, Drizzle 500ml ×1, Frizzle Spray 5oz ×1, Sizzle 750ml ×1",
+          "labelNote": null,
+          "giftMessageByLabel": null
+        }
+      ]
+    },
+    {
+      "planId": "PLAN-5074486",
+      "planStatus": "RELEASED",
+      "taskId": "TASK-5300662",
+      "taskStatus": "NEW",
+      "assigneeId": 4419,
+      "assigneeName": "MARTHA OLVERA",
+      "skipPackingScanForItem": true,
+      "autoRelease": true,
+      "dispatchSetting": "1282 Graza DS Wave Auto (BATCH fallback)",
+      "pickMethod": "BATCH_ORDER_PICK",
+      "exceptionOrders": 0,
+      "orders": [
+        {
+          "orderId": "DN-5199240",
+          "recipient": "Larissa Rudnicki, Portland OR",
+          "items": "Frizzle Spray 5oz ×1, Sizzle Refill ×1, Drizzle Refill ×1",
+          "labelNote": null,
+          "giftMessageByLabel": null
+        }
+      ]
+    }
+  ],
+  "compliance18xlsx": {
+    "fullWorkflow": true,
+    "assigneeUserId": 4419,
+    "noStuckPlans": true,
+    "noFalseExceptions": true,
+    "labelNotesSeparated": "N/A",
+    "waveRule": "N/A",
+    "batchRule": true,
+    "skipPackingScan": true,
+    "oneLabelPerRecipient": "N/A"
+  }
+}
