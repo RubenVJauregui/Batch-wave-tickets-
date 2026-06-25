@@ -1,0 +1,67 @@
+{
+  "run": "RUN31",
+  "date": "2026-06-25",
+  "time": "~23:30 PT",
+  "facility": "LT_F1",
+  "tenant": "LT",
+  "customer": "Drupley Inc / DBA Graza",
+  "customerId": "ORG-747717",
+  "channel": "Cin7_Omni",
+  "runType": "maintenance/verification",
+  "summary": {
+    "newOrdersFound": 0,
+    "dispatched": 0,
+    "labelNoteOrders": 0,
+    "waveGroups": 0,
+    "batchGroups": 0,
+    "plansCreated": 0,
+    "tasksCreated": 0,
+    "plansAudited": 12,
+    "assigneeFixes": 2,
+    "exceptions": 0
+  },
+  "fixesApplied": [
+    {
+      "planId": "PLAN-5074486",
+      "orderId": "DN-5199240",
+      "taskId": "TASK-5300662",
+      "issue": "defaultAssigneeUserId was null",
+      "fix": "POST /wms/outbound/pick-task/batch-assignment → assignee 4419",
+      "status": "fixed"
+    },
+    {
+      "planId": "PLAN-5074485",
+      "orderId": "DN-5199249",
+      "taskId": "TASK-5300661",
+      "issue": "defaultAssigneeUserId was null",
+      "fix": "POST /wms/outbound/pick-task/batch-assignment → assignee 4419",
+      "status": "fixed"
+    }
+  ],
+  "allPlans": [
+    {"planId": "PLAN-5074488", "taskId": "TASK-5300676", "assigneeId": 4419, "status": "RELEASED", "skipPacking": true},
+    {"planId": "PLAN-5074487", "taskId": "TASK-5300671", "assigneeId": 4419, "status": "RELEASED", "skipPacking": true},
+    {"planId": "PLAN-5074486", "taskId": "TASK-5300662", "assigneeId": 4419, "status": "RELEASED", "skipPacking": true, "fixedThisRun": true},
+    {"planId": "PLAN-5074485", "taskId": "TASK-5300661", "assigneeId": 4419, "status": "RELEASED", "skipPacking": true, "fixedThisRun": true},
+    {"planId": "PLAN-5074472", "taskId": "TASK-5300648", "assigneeId": 4419, "status": "RELEASED", "skipPacking": true},
+    {"planId": "PLAN-5074471", "taskId": "TASK-5300645", "assigneeId": 4419, "status": "RELEASED", "skipPacking": true},
+    {"planId": "PLAN-5074469", "taskId": "TASK-5300672", "assigneeId": 4419, "status": "RELEASED", "skipPacking": true},
+    {"planId": "PLAN-5074468", "taskId": "TASK-5300636", "assigneeId": 4419, "status": "RELEASED", "skipPacking": true},
+    {"planId": "PLAN-5074465", "taskId": "TASK-5300621", "assigneeId": 4419, "status": "RELEASED", "skipPacking": true},
+    {"planId": "PLAN-5074463", "taskId": "TASK-5300638", "assigneeId": 4419, "status": "RELEASED", "skipPacking": false},
+    {"planId": "PLAN-5074460", "taskId": "TASK-5300639", "assigneeId": 4419, "status": "RELEASED", "skipPacking": false},
+    {"planId": "PLAN-5074451", "taskId": "TASK-5300673", "assigneeId": 4419, "status": "RELEASED", "skipPacking": true}
+  ],
+  "compliance18xlsx": {
+    "fullWorkflow": true,
+    "assigneeUserId": 4419,
+    "noStuckPlans": true,
+    "noFalseExceptions": true,
+    "labelNotesSeparated": "N/A",
+    "waveRule": "N/A",
+    "batchRule": "N/A (no new orders)",
+    "skipPackingScan": true,
+    "oneLabelPerRecipient": "N/A",
+    "allAssigneesVerified": true
+  }
+}
