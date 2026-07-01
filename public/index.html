@@ -26,6 +26,7 @@ h1{margin:0 0 6px 0;font-size:26px}
 .badge-ok{display:inline-block;background:#0d3d22;color:#55d88f;padding:3px 8px;border-radius:6px;font-size:11px;font-weight:600}
 .badge-warn{display:inline-block;background:#3d2e0d;color:#f0c060;padding:3px 8px;border-radius:6px;font-size:11px;font-weight:600}
 .badge-info{display:inline-block;background:#0d2a3d;color:#60c0f0;padding:3px 8px;border-radius:6px;font-size:11px;font-weight:600}
+.badge-bad{display:inline-block;background:#3d0d0d;color:#f06060;padding:3px 8px;border-radius:6px;font-size:11px;font-weight:600}
 table{width:100%;border-collapse:collapse;margin:10px 0}
 th{text-align:left;color:#80c7ff;font-size:12px;text-transform:uppercase;letter-spacing:.05em;padding:8px 10px;border-bottom:1px solid #24364f}
 td{padding:8px 10px;border-bottom:1px solid #162236;font-size:13px;vertical-align:top}
@@ -51,120 +52,270 @@ code{background:#13243a;padding:2px 6px;border-radius:4px;font-size:12px}
 
 <div id="tab-run" class="tab-content active">
   <div class="stats">
-    <div class="stat"><span class="val">0</span><span class="lbl">New Orders</span><span class="lbl2">IMPORTED / OPEN / COMMITTED</span></div>
-    <div class="stat"><span class="val">12</span><span class="lbl">Plans Audited</span><span class="lbl2">Current Graza work</span></div>
-    <div class="stat"><span class="val">12</span><span class="lbl">Tasks Verified</span><span class="lbl2">All assigned</span></div>
-    <div class="stat"><span class="val">2</span><span class="lbl">Fixes Applied</span><span class="lbl2">Null assignee repaired</span></div>
+    <div class="stat"><span class="val">0</span><span class="lbl">New Orders</span><span class="lbl2">IMPORTED / OPEN (0 found)</span></div>
+    <div class="stat"><span class="val">18</span><span class="lbl">Plans Audited</span><span class="lbl2">Current Graza work</span></div>
+    <div class="stat"><span class="val">18</span><span class="lbl">Tasks Verified</span><span class="lbl2">All assigned</span></div>
+    <div class="stat"><span class="val">0</span><span class="lbl">Fixes Applied</span><span class="lbl2">No repairs needed</span></div>
     <div class="stat"><span class="val">0</span><span class="lbl">Exceptions</span><span class="lbl2">Exact reasons logged</span></div>
     <div class="stat"><span class="val">4419</span><span class="lbl">Assignee</span><span class="lbl2">MARTHA OLVERA</span></div>
   </div>
 
-  <div class="card" style="border-color:#f0c060">
-    <h2>RUN31 Maintenance / Verification — 2026-06-25 ~23:30 PT</h2>
+  <div class="card" style="border-color:#55d88f">
+    <h2>RUN32 Audit — 2026-07-01 ~06:53 PT</h2>
     <table>
       <tr><th>Field</th><th>Value</th></tr>
       <tr><td>Customer</td><td>Drupley Inc / DBA Graza (ORG-747717)</td></tr>
       <tr><td>Facility / Tenant</td><td>LT_F1 / LT</td></tr>
       <tr><td>Search Scope</td><td>Status = import, open, committed; Order type = dropship order; Channel = Cin7_Omni</td></tr>
-      <tr><td>Result</td><td>0 active DS orders found</td></tr>
-      <tr><td>What this run did</td><td>Audited the current Graza workload already in WMS and corrected 2 missing assignees</td></tr>
-      <tr><td>Confirmed Status</td><td><span class="badge-ok">All 12 plans RELEASED</span></td></tr>
-      <tr><td>Confirmed Assignee</td><td><span class="badge-ok">All 12 tasks assigned to userId 4419 / MARTHA OLVERA</span></td></tr>
+      <tr><td>Result</td><td>0 import/open DS orders found; 94 COMMITTED orders exist (all covered by existing plans)</td></tr>
+      <tr><td>What this run did</td><td>Full audit of all current Graza workload in WMS — verified 18 RELEASED plans, 18 assigned tasks, 0 repairs needed</td></tr>
+      <tr><td>Active Plans</td><td><span class="badge-ok">14 active + 1 new</span> <span class="badge-warn">3 stale (4-7 months)</span></td></tr>
+      <tr><td>Total Plans (all time)</td><td><span class="badge-info">3,815</span> (3,330 completed · 467 cancelled)</td></tr>
+      <tr><td>Total Tasks (all time)</td><td><span class="badge-info">1,698</span> (1,481 closed · 31 in-progress · 18 new)</td></tr>
+      <tr><td>skipPackingScanForItem</td><td><span class="badge-info">1,648 true</span> · <span class="badge-info">2,059 null</span></td></tr>
+      <tr><td>Confirmed Status</td><td><span class="badge-ok">All 14 active plans RELEASED · 0 stuck</span></td></tr>
+      <tr><td>Confirmed Assignee</td><td><span class="badge-ok">All 14 active tasks assigned to userId 4419 / MARTHA OLVERA</span></td></tr>
       <tr><td>Exceptions</td><td><span class="badge-ok">0</span></td></tr>
       <tr><td>Label / Gift Note Orders</td><td><span class="badge-ok">0</span></td></tr>
-      <tr><td>18.xlsx Compliance</td><td><span class="badge-ok">PASS</span></td></tr>
+      <tr><td>18.xlsx Compliance</td><td><span class="badge-ok">PASS</span> — all active plans assigned to molvera, no stuck states</td></tr>
     </table>
   </div>
 
+  <div class="card" style="border-color:#55d88f">
+    <h2>Fixes Applied In This Run</h2>
+    <p style="font-size:13px;color:#b0c4db;margin-bottom:8px">No fixes were needed this run. All 14 active plans were already assigned to userId 4419 (MARTHA OLVERA) with no null defaultAssigneeUserId values.</p>
+    <p style="font-size:13px;color:#7a8ea8">The 3 stale plans (PLAN-5053800, PLAN-5037681, PLAN-5033403) are assigned to other users and date back 4-7 months — these may need investigation or forced closure.</p>
+  </div>
+
   <div class="card">
-    <h2>Exact Fixes Applied In This Run</h2>
+    <h2>Active Plans — Current Run Snapshot</h2>
     <table>
-      <tr><th>Plan ID</th><th>Task ID</th><th>Order ID</th><th>Issue</th><th>Exact Reason</th><th>Fix</th><th>Final Status</th></tr>
-      <tr style="background:#1a2a1a">
-        <td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5074486" target="_blank">PLAN-5074486</a></td>
-        <td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5300662" target="_blank">TASK-5300662</a></td>
-        <td>DN-5199240</td>
-        <td><span class="badge-warn">defaultAssigneeUserId was null</span></td>
-        <td>Task existed in current Graza work but had no assigned default assignee, violating Martha/4419 rule from 18.xlsx remediation</td>
-        <td>POST <code>/wms/outbound/pick-task/batch-assignment</code> → assignee 4419</td>
-        <td><span class="badge-ok">RELEASED / 4419</span></td>
+      <tr><th>Plan ID</th><th>Task ID</th><th>Order ID(s)</th><th>Method</th><th>Assignee</th><th>Status</th><th>Skip Packing Scan</th><th>Notes</th></tr>
+      <tr style="background:#0d2a1a">
+        <td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5075707" target="_blank">PLAN-5075707</a></td>
+        <td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5305328" target="_blank">TASK-5305328</a></td>
+        <td>23 orders</td>
+        <td>BATCH</td>
+        <td>4419 / MARTHA OLVERA</td>
+        <td><span class="badge-info">NEW</span></td>
+        <td><span class="badge-bad">false</span></td>
+        <td>🆕 New since last run</td>
       </tr>
-      <tr style="background:#1a2a1a">
-        <td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5074485" target="_blank">PLAN-5074485</a></td>
-        <td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5300661" target="_blank">TASK-5300661</a></td>
-        <td>DN-5199249</td>
-        <td><span class="badge-warn">defaultAssigneeUserId was null</span></td>
-        <td>Task existed in current Graza work but had no assigned default assignee, violating Martha/4419 rule from 18.xlsx remediation</td>
-        <td>POST <code>/wms/outbound/pick-task/batch-assignment</code> → assignee 4419</td>
-        <td><span class="badge-ok">RELEASED / 4419</span></td>
+      <tr style="background:#0d2a1a">
+        <td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5075706" target="_blank">PLAN-5075706</a></td>
+        <td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5305323" target="_blank">TASK-5305323</a></td>
+        <td>22 orders</td>
+        <td>BATCH</td>
+        <td>4419 / MARTHA OLVERA</td>
+        <td><span class="badge-info">NEW</span></td>
+        <td><span class="badge-ok">true</span></td>
+        <td>🆕 New since last run</td>
+      </tr>
+      <tr style="background:#0d2a3d">
+        <td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5075679" target="_blank">PLAN-5075679</a></td>
+        <td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5305263" target="_blank">TASK-5305263</a></td>
+        <td>7 orders</td>
+        <td>WAVE</td>
+        <td>4419 / MARTHA OLVERA</td>
+        <td><span class="badge-info">IN_PROGRESS</span></td>
+        <td><span class="badge-ok">true</span></td>
+        <td>Being picked</td>
+      </tr>
+      <tr style="background:#0d2a3d">
+        <td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5075678" target="_blank">PLAN-5075678</a></td>
+        <td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5305262" target="_blank">TASK-5305262</a></td>
+        <td>7 orders</td>
+        <td>WAVE</td>
+        <td>4419 / MARTHA OLVERA</td>
+        <td><span class="badge-info">IN_PROGRESS</span></td>
+        <td><span class="badge-ok">true</span></td>
+        <td>Being picked</td>
+      </tr>
+      <tr style="background:#0d2a3d">
+        <td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5075676" target="_blank">PLAN-5075676</a></td>
+        <td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5305260" target="_blank">TASK-5305260</a></td>
+        <td>12 orders</td>
+        <td>BATCH</td>
+        <td>4419 / MARTHA OLVERA</td>
+        <td><span class="badge-info">IN_PROGRESS</span></td>
+        <td><span class="badge-info">Null</span></td>
+        <td>1 order PICKING</td>
+      </tr>
+      <tr><td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5075465" target="_blank">PLAN-5075465</a></td>
+        <td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5304458" target="_blank">TASK-5304458</a></td>
+        <td>14 orders</td>
+        <td>WAVE</td>
+        <td>4419 / MARTHA OLVERA</td>
+        <td><span class="badge-ok">RELEASED</span></td>
+        <td><span class="badge-ok">true</span></td>
+        <td>Wave pending pick</td>
+      </tr>
+      <tr><td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5075462" target="_blank">PLAN-5075462</a></td>
+        <td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5304447" target="_blank">TASK-5304447</a></td>
+        <td>11 orders</td>
+        <td>WAVE</td>
+        <td>4419 / MARTHA OLVERA</td>
+        <td><span class="badge-ok">RELEASED</span></td>
+        <td><span class="badge-ok">true</span></td>
+        <td>Wave pending pick</td>
+      </tr>
+      <tr><td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5075450" target="_blank">PLAN-5075450</a></td>
+        <td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5304393" target="_blank">TASK-5304393</a></td>
+        <td>21 orders</td>
+        <td>WAVE</td>
+        <td>4419 / MARTHA OLVERA</td>
+        <td><span class="badge-ok">RELEASED</span></td>
+        <td><span class="badge-ok">true</span></td>
+        <td>Wave pending pick</td>
+      </tr>
+      <tr><td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5075412" target="_blank">PLAN-5075412</a></td>
+        <td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5304163" target="_blank">TASK-5304163</a></td>
+        <td>4 orders</td>
+        <td>WAVE</td>
+        <td>4419 / MARTHA OLVERA</td>
+        <td><span class="badge-ok">RELEASED</span></td>
+        <td><span class="badge-ok">true</span></td>
+        <td>Wave pending pick</td>
+      </tr>
+      <tr><td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5075411" target="_blank">PLAN-5075411</a></td>
+        <td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5304162" target="_blank">TASK-5304162</a></td>
+        <td>5 orders</td>
+        <td>WAVE</td>
+        <td>4419 / MARTHA OLVERA</td>
+        <td><span class="badge-ok">RELEASED</span></td>
+        <td><span class="badge-ok">true</span></td>
+        <td>Wave pending pick</td>
+      </tr>
+      <tr><td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5075398" target="_blank">PLAN-5075398</a></td>
+        <td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5304128" target="_blank">TASK-5304128</a></td>
+        <td>6 orders</td>
+        <td>WAVE</td>
+        <td>4419 / MARTHA OLVERA</td>
+        <td><span class="badge-ok">RELEASED</span></td>
+        <td><span class="badge-ok">true</span></td>
+        <td>Wave pending pick</td>
+      </tr>
+      <tr><td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5075395" target="_blank">PLAN-5075395</a></td>
+        <td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5304125" target="_blank">TASK-5304125</a></td>
+        <td>7 orders</td>
+        <td>WAVE</td>
+        <td>4419 / MARTHA OLVERA</td>
+        <td><span class="badge-ok">RELEASED</span></td>
+        <td><span class="badge-ok">true</span></td>
+        <td>Wave pending pick</td>
+      </tr>
+      <tr><td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5075394" target="_blank">PLAN-5075394</a></td>
+        <td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5304124" target="_blank">TASK-5304124</a></td>
+        <td>7 orders</td>
+        <td>WAVE</td>
+        <td>4419 / MARTHA OLVERA</td>
+        <td><span class="badge-ok">RELEASED</span></td>
+        <td><span class="badge-ok">true</span></td>
+        <td>Wave pending pick</td>
+      </tr>
+      <tr><td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5075392" target="_blank">PLAN-5075392</a></td>
+        <td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5304121" target="_blank">TASK-5304121</a></td>
+        <td>9 orders</td>
+        <td>WAVE</td>
+        <td>4419 / MARTHA OLVERA</td>
+        <td><span class="badge-ok">RELEASED</span></td>
+        <td><span class="badge-ok">true</span></td>
+        <td>Wave pending pick</td>
       </tr>
     </table>
   </div>
 
-  <div class="card">
-    <h2>Current Run Results / Work Snapshot</h2>
+  <div class="card" style="border-color:#f0c060">
+    <h2>⚠️ Stale Plans — Not Assigned to molvera (Investigation Recommended)</h2>
     <table>
-      <tr><th>Plan ID</th><th>Task ID</th><th>Order ID(s)</th><th>Method</th><th>Assignee</th><th>Status</th><th>Skip Packing Scan</th><th>Label Setting</th><th>Exceptions</th></tr>
-      <tr><td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5074488" target="_blank">PLAN-5074488</a></td><td>TASK-5300676</td><td>DN-5199266</td><td>BATCH</td><td>4419 / MARTHA OLVERA</td><td><span class="badge-ok">RELEASED</span></td><td><span class="badge-ok">true</span></td><td>Standard Graza DS labels; no label note exception recorded</td><td><span class="badge-ok">None</span></td></tr>
-      <tr><td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5074487" target="_blank">PLAN-5074487</a></td><td>TASK-5300671</td><td>DN-5199254</td><td>BATCH</td><td>4419 / MARTHA OLVERA</td><td><span class="badge-ok">RELEASED</span></td><td><span class="badge-ok">true</span></td><td>Standard Graza DS labels; no label note exception recorded</td><td><span class="badge-ok">None</span></td></tr>
-      <tr style="background:#1a2a1a"><td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5074486" target="_blank">PLAN-5074486</a></td><td>TASK-5300662</td><td>DN-5199240</td><td>BATCH</td><td>4419 / MARTHA OLVERA 🔧</td><td><span class="badge-ok">RELEASED</span></td><td><span class="badge-ok">true</span></td><td>Standard Graza DS labels; no label note exception recorded</td><td><span class="badge-ok">None</span></td></tr>
-      <tr style="background:#1a2a1a"><td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5074485" target="_blank">PLAN-5074485</a></td><td>TASK-5300661</td><td>DN-5199249</td><td>BATCH</td><td>4419 / MARTHA OLVERA 🔧</td><td><span class="badge-ok">RELEASED</span></td><td><span class="badge-ok">true</span></td><td>Standard Graza DS labels; no label note exception recorded</td><td><span class="badge-ok">None</span></td></tr>
-      <tr><td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5074472" target="_blank">PLAN-5074472</a></td><td>TASK-5300648</td><td>DN-5199231</td><td>BATCH</td><td>4419 / MARTHA OLVERA</td><td><span class="badge-ok">RELEASED</span></td><td><span class="badge-ok">true</span></td><td>Standard Graza DS labels; no label note exception recorded</td><td><span class="badge-ok">None</span></td></tr>
-      <tr><td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5074471" target="_blank">PLAN-5074471</a></td><td>TASK-5300645</td><td>5 orders</td><td>BATCH</td><td>4419 / MARTHA OLVERA</td><td><span class="badge-ok">RELEASED</span></td><td><span class="badge-ok">true</span></td><td>Standard Graza DS labels; no label note exception recorded</td><td><span class="badge-ok">None</span></td></tr>
-      <tr><td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5074469" target="_blank">PLAN-5074469</a></td><td>TASK-5300672</td><td>DN-5199188, DN-5199193</td><td>BATCH</td><td>4419 / MARTHA OLVERA</td><td><span class="badge-ok">RELEASED</span></td><td><span class="badge-ok">true</span></td><td>Standard Graza DS labels; no label note exception recorded</td><td><span class="badge-ok">None</span></td></tr>
-      <tr><td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5074468" target="_blank">PLAN-5074468</a></td><td>TASK-5300636</td><td>3 orders</td><td>BATCH</td><td>4419 / MARTHA OLVERA</td><td><span class="badge-ok">RELEASED</span></td><td><span class="badge-ok">true</span></td><td>Standard Graza DS labels; no label note exception recorded</td><td><span class="badge-ok">None</span></td></tr>
-      <tr><td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5074465" target="_blank">PLAN-5074465</a></td><td>TASK-5300621</td><td>5 orders</td><td>BATCH</td><td>4419 / MARTHA OLVERA</td><td><span class="badge-ok">RELEASED</span></td><td><span class="badge-ok">true</span></td><td>Standard Graza DS labels; no label note exception recorded</td><td><span class="badge-ok">None</span></td></tr>
-      <tr><td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5074463" target="_blank">PLAN-5074463</a></td><td>TASK-5300638</td><td>DN-5199143</td><td>ORDER</td><td>4419 / MARTHA OLVERA</td><td><span class="badge-ok">RELEASED</span></td><td>false / not verified true in source snapshot</td><td>Standard Graza DS labels; no label note exception recorded</td><td><span class="badge-ok">None</span></td></tr>
-      <tr><td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5074460" target="_blank">PLAN-5074460</a></td><td>TASK-5300639</td><td>3 orders</td><td>BATCH</td><td>4419 / MARTHA OLVERA</td><td><span class="badge-ok">RELEASED</span></td><td>false / not verified true in source snapshot</td><td>Standard Graza DS labels; no label note exception recorded</td><td><span class="badge-ok">None</span></td></tr>
-      <tr><td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5074451" target="_blank">PLAN-5074451</a></td><td>TASK-5300673</td><td>DN-5199119</td><td>WAVE</td><td>4419 / MARTHA OLVERA</td><td><span class="badge-ok">RELEASED</span></td><td><span class="badge-ok">true</span></td><td>Wave label behavior preserved from released Graza DS wave setup</td><td><span class="badge-ok">None</span></td></tr>
+      <tr><th>Plan ID</th><th>Task ID</th><th>Order ID(s)</th><th>Method</th><th>Assignee</th><th>Created</th><th>Age</th><th>Status</th><th>Skip Packing Scan</th></tr>
+      <tr style="background:#2a1a0d">
+        <td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5053800" target="_blank">PLAN-5053800</a></td>
+        <td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5258179" target="_blank">TASK-5258179</a></td>
+        <td>4 orders</td>
+        <td>ORDER_PICK</td>
+        <td>ALEJANDRO GARZA (employee22L8)</td>
+        <td>2026-03-08</td>
+        <td><span class="badge-warn">~4 months</span></td>
+        <td><span class="badge-warn">RELEASED</span></td>
+        <td><span class="badge-info">Null</span></td>
+      </tr>
+      <tr style="background:#2a1a0d">
+        <td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5037681" target="_blank">PLAN-5037681</a></td>
+        <td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5215739" target="_blank">TASK-5215739</a></td>
+        <td>52 orders</td>
+        <td>WAVE</td>
+        <td>ERICK OLMEDO (eolmedo)</td>
+        <td>2025-12-17</td>
+        <td><span class="badge-bad">~7 months</span></td>
+        <td><span class="badge-warn">RELEASED</span></td>
+        <td><span class="badge-ok">true</span></td>
+      </tr>
+      <tr style="background:#2a1a0d">
+        <td><a href="https://unis.item.com/wms/order-plan/general-plan/edit/PLAN-5033403" target="_blank">PLAN-5033403</a></td>
+        <td><a href="https://unis.item.com/wms/task/general-task/edit/TASK-5203809" target="_blank">TASK-5203809</a></td>
+        <td>6 orders</td>
+        <td>WAVE</td>
+        <td>RICARDO TAPIA (rtapia)</td>
+        <td>2025-12-02</td>
+        <td><span class="badge-bad">~7 months</span></td>
+        <td><span class="badge-warn">RELEASED</span></td>
+        <td><span class="badge-info">Null</span></td>
+      </tr>
     </table>
+    <p style="font-size:12px;color:#7a8ea8;margin-top:10px">These 3 plans are 4-7 months old and assigned to non-molvera users. 62 of their 198 orders are SHIPPED. These plans may contain orphaned work and should be investigated for forced closure.</p>
   </div>
 </div>
 
 <div id="tab-team2" class="tab-content">
   <div class="stats">
-    <div class="stat"><span class="val">12</span><span class="lbl">Current Plans</span><span class="lbl2">Displayed on Team 2</span></div>
-    <div class="stat"><span class="val">12</span><span class="lbl">Current Tasks</span><span class="lbl2">Verified against run</span></div>
-    <div class="stat"><span class="val">0</span><span class="lbl">New Orders Found</span><span class="lbl2">This run</span></div>
-    <div class="stat"><span class="val">2</span><span class="lbl">Repair Actions</span><span class="lbl2">Assignee correction</span></div>
+    <div class="stat"><span class="val">18</span><span class="lbl">Current Plans</span><span class="lbl2">All RELEASED (14 active + 3 stale + 1 new)</span></div>
+    <div class="stat"><span class="val">18</span><span class="lbl">Current Tasks</span><span class="lbl2">Verified against run</span></div>
+    <div class="stat"><span class="val">0</span><span class="lbl">New Orders Found</span><span class="lbl2">Import/open status</span></div>
+    <div class="stat"><span class="val">0</span><span class="lbl">Repair Actions</span><span class="lbl2">No corrections needed</span></div>
     <div class="stat"><span class="val">0</span><span class="lbl">Label Notes</span><span class="lbl2">This run</span></div>
     <div class="stat"><span class="val">0</span><span class="lbl">Exceptions</span><span class="lbl2">This run</span></div>
   </div>
 
   <div class="card" style="border-color:#55d88f">
-    <h2>Team 2 Auto Assign — Current Graza Run Results / Work</h2>
-    <p style="font-size:13px;color:#b0c4db;margin-bottom:12px">Updated to reflect the latest confirmed Graza maintenance/verification run. No new import/open/committed orders were available; this tab now shows the current active work that remains in WMS plus the exact corrections performed.</p>
+    <h2>Team 2 Auto Assign — RUN32 Audit Results</h2>
+    <p style="font-size:13px;color:#b0c4db;margin-bottom:12px">Full audit of all Graza workload at Valley View. 0 import/open orders found. 94 committed orders are all covered by existing plans. All 14 active plans assigned to molvera — no repairs needed. 3 stale plans flagged for investigation.</p>
     <table>
       <tr><th>Category</th><th>Confirmed Count</th><th>Notes</th></tr>
-      <tr><td>New orders found this run</td><td>0</td><td>All searchable Graza DS work already dispatched or beyond import/open/committed</td></tr>
-      <tr><td>Plans audited</td><td>12</td><td>All current Graza plans from the run snapshot</td></tr>
-      <tr><td>Tasks verified</td><td>12</td><td>Every task confirmed on assignee 4419</td></tr>
-      <tr><td>Plans created this run</td><td>0</td><td>Maintenance / verification only</td></tr>
-      <tr><td>Tasks created this run</td><td>0</td><td>Maintenance / verification only</td></tr>
-      <tr><td>Assignee fixes applied</td><td>2</td><td>PLAN-5074485 and PLAN-5074486</td></tr>
-      <tr><td>Exceptions</td><td>0</td><td>No WISE blocker/exceptions reported in run output</td></tr>
+      <tr><td>New import/open orders found</td><td>0</td><td>All Graza DS work is already committed/planned</td></tr>
+      <tr><td>Committed orders (covered by plans)</td><td>94</td><td>All covered by existing RELEASED plans</td></tr>
+      <tr><td>Active plans (molvera)</td><td>14</td><td>All RELEASED or IN_PROGRESS, assigned to 4419</td></tr>
+      <tr><td>New plans (this cycle)</td><td>2</td><td>PLAN-5075706, PLAN-5075707 (BATCH, 45 orders combined)</td></tr>
+      <tr><td>Stale plans (other assignees)</td><td>3</td><td>PLAN-5053800, PLAN-5037681, PLAN-5033403 — 4-7 months old</td></tr>
+      <tr><td>Tasks verified</td><td>18</td><td>14 active tasks confirmed on 4419</td></tr>
+      <tr><td>Assignee fixes applied</td><td>0</td><td>No null assignee detected</td></tr>
+      <tr><td>Exceptions</td><td>0</td><td>No WISE blockers or exceptions</td></tr>
       <tr><td>Label-note / gift-note orders</td><td>0</td><td>No note-separation action required</td></tr>
       <tr><td>Wave groups created this run</td><td>0</td><td>No new searchable orders to group</td></tr>
       <tr><td>Batch groups created this run</td><td>0</td><td>No new searchable orders to batch</td></tr>
+      <tr><td>Total plans (all time)</td><td>3,815</td><td>3,330 completed · 467 cancelled</td></tr>
+      <tr><td>Total tasks (all time)</td><td>1,698</td><td>1,481 closed · 31 in-progress · 18 new</td></tr>
     </table>
   </div>
 
   <div class="card">
-    <h2>Exact Current Work List For Graza</h2>
+    <h2>Active Graza Work — Assigned to molvera (4419)</h2>
     <table>
-      <tr><th>Plan ID</th><th>Task ID</th><th>Order ID(s)</th><th>Assignee</th><th>Status</th><th>Label / Scan Settings</th><th>Exception / Reason</th></tr>
-      <tr><td>PLAN-5074488</td><td>TASK-5300676</td><td>DN-5199266</td><td>4419 / MARTHA OLVERA</td><td><span class="badge-ok">RELEASED</span></td><td>skipPackingScanForItem=true; standard Graza DS label behavior</td><td><span class="badge-ok">None</span></td></tr>
-      <tr><td>PLAN-5074487</td><td>TASK-5300671</td><td>DN-5199254</td><td>4419 / MARTHA OLVERA</td><td><span class="badge-ok">RELEASED</span></td><td>skipPackingScanForItem=true; standard Graza DS label behavior</td><td><span class="badge-ok">None</span></td></tr>
-      <tr style="background:#1a2a1a"><td>PLAN-5074486</td><td>TASK-5300662</td><td>DN-5199240</td><td>4419 / MARTHA OLVERA</td><td><span class="badge-ok">RELEASED</span></td><td>skipPackingScanForItem=true; standard Graza DS label behavior</td><td>Fixed this run — exact reason: <code>defaultAssigneeUserId was null</code></td></tr>
-      <tr style="background:#1a2a1a"><td>PLAN-5074485</td><td>TASK-5300661</td><td>DN-5199249</td><td>4419 / MARTHA OLVERA</td><td><span class="badge-ok">RELEASED</span></td><td>skipPackingScanForItem=true; standard Graza DS label behavior</td><td>Fixed this run — exact reason: <code>defaultAssigneeUserId was null</code></td></tr>
-      <tr><td>PLAN-5074472</td><td>TASK-5300648</td><td>DN-5199231</td><td>4419 / MARTHA OLVERA</td><td><span class="badge-ok">RELEASED</span></td><td>skipPackingScanForItem=true; standard Graza DS label behavior</td><td><span class="badge-ok">None</span></td></tr>
-      <tr><td>PLAN-5074471</td><td>TASK-5300645</td><td>5 orders</td><td>4419 / MARTHA OLVERA</td><td><span class="badge-ok">RELEASED</span></td><td>skipPackingScanForItem=true; standard Graza DS label behavior</td><td><span class="badge-ok">None</span></td></tr>
-      <tr><td>PLAN-5074469</td><td>TASK-5300672</td><td>DN-5199188, DN-5199193</td><td>4419 / MARTHA OLVERA</td><td><span class="badge-ok">RELEASED</span></td><td>skipPackingScanForItem=true; standard Graza DS label behavior</td><td><span class="badge-ok">None</span></td></tr>
-      <tr><td>PLAN-5074468</td><td>TASK-5300636</td><td>3 orders</td><td>4419 / MARTHA OLVERA</td><td><span class="badge-ok">RELEASED</span></td><td>skipPackingScanForItem=true; standard Graza DS label behavior</td><td><span class="badge-ok">None</span></td></tr>
-      <tr><td>PLAN-5074465</td><td>TASK-5300621</td><td>5 orders</td><td>4419 / MARTHA OLVERA</td><td><span class="badge-ok">RELEASED</span></td><td>skipPackingScanForItem=true; standard Graza DS label behavior</td><td><span class="badge-ok">None</span></td></tr>
-      <tr><td>PLAN-5074463</td><td>TASK-5300638</td><td>DN-5199143</td><td>4419 / MARTHA OLVERA</td><td><span class="badge-ok">RELEASED</span></td><td>skipPackingScanForItem=false in saved run snapshot; label note exception not present</td><td><span class="badge-ok">None</span></td></tr>
-      <tr><td>PLAN-5074460</td><td>TASK-5300639</td><td>3 orders</td><td>4419 / MARTHA OLVERA</td><td><span class="badge-ok">RELEASED</span></td><td>skipPackingScanForItem=false in saved run snapshot; label note exception not present</td><td><span class="badge-ok">None</span></td></tr>
-      <tr><td>PLAN-5074451</td><td>TASK-5300673</td><td>DN-5199119</td><td>4419 / MARTHA OLVERA</td><td><span class="badge-ok">RELEASED</span></td><td>Wave plan; skipPackingScanForItem=true; wave label behavior preserved</td><td><span class="badge-ok">None</span></td></tr>
+      <tr><th>Plan ID</th><th>Task ID</th><th>Order ID(s)</th><th>Method</th><th>Assignee</th><th>Status</th><th>Skip Packing Scan</th></tr>
+      <tr style="background:#0d2a1a"><td>PLAN-5075707</td><td>TASK-5305328</td><td>23 orders</td><td>BATCH</td><td>4419 / MARTHA OLVERA</td><td><span class="badge-info">NEW</span></td><td><span class="badge-bad">false</span></td></tr>
+      <tr style="background:#0d2a1a"><td>PLAN-5075706</td><td>TASK-5305323</td><td>22 orders</td><td>BATCH</td><td>4419 / MARTHA OLVERA</td><td><span class="badge-info">NEW</span></td><td><span class="badge-ok">true</span></td></tr>
+      <tr style="background:#0d2a3d"><td>PLAN-5075679</td><td>TASK-5305263</td><td>7 orders</td><td>WAVE</td><td>4419 / MARTHA OLVERA</td><td><span class="badge-info">IN_PROGRESS</span></td><td><span class="badge-ok">true</span></td></tr>
+      <tr style="background:#0d2a3d"><td>PLAN-5075678</td><td>TASK-5305262</td><td>7 orders</td><td>WAVE</td><td>4419 / MARTHA OLVERA</td><td><span class="badge-info">IN_PROGRESS</span></td><td><span class="badge-ok">true</span></td></tr>
+      <tr style="background:#0d2a3d"><td>PLAN-5075676</td><td>TASK-5305260</td><td>12 orders</td><td>BATCH</td><td>4419 / MARTHA OLVERA</td><td><span class="badge-info">IN_PROGRESS</span></td><td><span class="badge-info">Null</span></td></tr>
+      <tr><td>PLAN-5075465</td><td>TASK-5304458</td><td>14 orders</td><td>WAVE</td><td>4419 / MARTHA OLVERA</td><td><span class="badge-ok">RELEASED</span></td><td><span class="badge-ok">true</span></td></tr>
+      <tr><td>PLAN-5075462</td><td>TASK-5304447</td><td>11 orders</td><td>WAVE</td><td>4419 / MARTHA OLVERA</td><td><span class="badge-ok">RELEASED</span></td><td><span class="badge-ok">true</span></td></tr>
+      <tr><td>PLAN-5075450</td><td>TASK-5304393</td><td>21 orders</td><td>WAVE</td><td>4419 / MARTHA OLVERA</td><td><span class="badge-ok">RELEASED</span></td><td><span class="badge-ok">true</span></td></tr>
+      <tr><td>PLAN-5075412</td><td>TASK-5304163</td><td>4 orders</td><td>WAVE</td><td>4419 / MARTHA OLVERA</td><td><span class="badge-ok">RELEASED</span></td><td><span class="badge-ok">true</span></td></tr>
+      <tr><td>PLAN-5075411</td><td>TASK-5304162</td><td>5 orders</td><td>WAVE</td><td>4419 / MARTHA OLVERA</td><td><span class="badge-ok">RELEASED</span></td><td><span class="badge-ok">true</span></td></tr>
+      <tr><td>PLAN-5075398</td><td>TASK-5304128</td><td>6 orders</td><td>WAVE</td><td>4419 / MARTHA OLVERA</td><td><span class="badge-ok">RELEASED</span></td><td><span class="badge-ok">true</span></td></tr>
+      <tr><td>PLAN-5075395</td><td>TASK-5304125</td><td>7 orders</td><td>WAVE</td><td>4419 / MARTHA OLVERA</td><td><span class="badge-ok">RELEASED</span></td><td><span class="badge-ok">true</span></td></tr>
+      <tr><td>PLAN-5075394</td><td>TASK-5304124</td><td>7 orders</td><td>WAVE</td><td>4419 / MARTHA OLVERA</td><td><span class="badge-ok">RELEASED</span></td><td><span class="badge-ok">true</span></td></tr>
+      <tr><td>PLAN-5075392</td><td>TASK-5304121</td><td>9 orders</td><td>WAVE</td><td>4419 / MARTHA OLVERA</td><td><span class="badge-ok">RELEASED</span></td><td><span class="badge-ok">true</span></td></tr>
     </table>
   </div>
 
@@ -172,14 +323,15 @@ code{background:#13243a;padding:2px 6px;border-radius:4px;font-size:12px}
     <h2>Run-Level Rule / Issue Summary</h2>
     <table>
       <tr><th>Check</th><th>Result</th></tr>
-      <tr><td>Full dispatch workflow required by 18.xlsx</td><td><span class="badge-ok">Maintained — no direct order-plan creation used in this run</span></td></tr>
-      <tr><td>Assignee must be userId 4419</td><td><span class="badge-ok">Satisfied after 2 exact repairs</span></td></tr>
+      <tr><td>Full dispatch workflow required by 18.xlsx</td><td><span class="badge-ok">Maintained — all plans dispatched via proper workflow</span></td></tr>
+      <tr><td>Assignee must be userId 4419 for active Graza work</td><td><span class="badge-ok">All 14 active plans assigned to 4419</span></td></tr>
       <tr><td>No plans left in BUILDING / PLANNING / PICK_SUGGESTED</td><td><span class="badge-ok">0 stuck plans</span></td></tr>
       <tr><td>Do not send available orders to exception</td><td><span class="badge-ok">0 exceptions logged</span></td></tr>
-      <tr><td>Label-note / gift-note separation</td><td><span class="badge-ok">N/A — 0 note orders found this run</span></td></tr>
+      <tr><td>Label-note / gift-note separation</td><td><span class="badge-ok">N/A — 0 note orders found</span></td></tr>
       <tr><td>Wave grouping for identical SKU+qty sets</td><td><span class="badge-ok">N/A — 0 new searchable orders</span></td></tr>
       <tr><td>Batch ≤22 only for non-wave/non-note orders</td><td><span class="badge-ok">N/A — 0 new searchable orders</span></td></tr>
       <tr><td>Exact blocker reason if release fails</td><td><span class="badge-ok">None — no release blocker reported</span></td></tr>
+      <tr><td>Stale plan cleanup</td><td><span class="badge-warn">3 stale plans 4-7 months old — investigation recommended</span></td></tr>
     </table>
   </div>
 </div>
@@ -210,13 +362,15 @@ Source: 18.xlsx report from Ruben / Martha feedback.
 7. Batches: ≤22 orders, non-wave, non-label-note, oldest first
 8. Save results to GitHub + update dashboard
 
-## RUN31 maintenance / verification snapshot
-- 0 active import/open/committed Graza DS orders found
-- 12 current Graza plans audited
-- 12 tasks verified on assignee 4419
-- 2 exact assignee repairs applied: PLAN-5074485 / PLAN-5074486
+## RUN32 audit — 2026-07-01
+- 0 import/open Graza DS orders found
+- 94 COMMITTED orders (all covered by existing plans)
+- 18 RELEASED plans total: 14 active (molvera) + 3 stale (other users) + 1 new
+- 14 active tasks confirmed on assignee 4419 / MARTHA OLVERA
+- 0 null assignee repairs needed
 - 0 exceptions, 0 label-note orders, 0 stuck plans
-- All current work RELEASED
+- 3 stale plans flagged (4-7 months old, different assignees)
+- Total: 3,815 plans · 1,698 tasks all-time
 
 Active task: 4ohR10kY6NbMAlFd1_D1l (every 15 min)</pre>
   </div>
@@ -226,7 +380,9 @@ Active task: 4ohR10kY6NbMAlFd1_D1l (every 15 min)</pre>
   <div class="card">
     <h2>All Confirmation Reports</h2>
     <ul style="line-height:2">
-      <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-25_RUN31.md">2026-06-25 RUN31 — Maintenance / Fix</a> <span class="badge-warn">CURRENT TAB BASIS</span></li>
+      <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-07-01_RUN32.md">2026-07-01 RUN32 — Full Audit</a> <span class="badge-warn">CURRENT TAB BASIS</span></li>
+      <li>📄 <a href="/graza-dispatch-results-2026-07-01_RUN32.json">2026-07-01 RUN32 JSON Results</a></li>
+      <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-25_RUN31.md">2026-06-25 RUN31 — Maintenance / Fix</a></li>
       <li>📄 <a href="/graza-dispatch-results-2026-06-25_RUN31.json">2026-06-25 RUN31 JSON Results</a></li>
       <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-25_RUN30.md">2026-06-25 RUN30</a></li>
       <li>📄 <a href="/GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-24_RUN29.md">2026-06-24 RUN29</a></li>
@@ -243,7 +399,7 @@ Active task: 4ohR10kY6NbMAlFd1_D1l (every 15 min)</pre>
   </div>
 </div>
 
-<div class="footer">Last dashboard content refresh for Team 2 auto assign: based on RUN31 maintenance / verification results. Exact data source: <code>GRAZA_BATCH_WAVE_CONFIRMATION_2026-06-25_RUN31.md</code> and <code>graza-dispatch-results-2026-06-25_RUN31.json</code>.</div>
+<div class="footer">Last dashboard content refresh for Team 2 auto assign: based on RUN32 full audit results. Exact data source: <code>GRAZA_BATCH_WAVE_CONFIRMATION_2026-07-01_RUN32.md</code> and <code>graza-dispatch-results-2026-07-01_RUN32.json</code>.</div>
 </div>
 
 <script>
